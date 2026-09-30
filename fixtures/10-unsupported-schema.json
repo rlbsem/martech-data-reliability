@@ -1,0 +1,19 @@
+{
+  "source": "paid_media",
+  "batch_id": "10-unsupported-schema",
+  "schema_version": 3,
+  "covered_through": "2026-09-06",
+  "rows": [
+    {
+      "id": "p1",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-01",
+      "campaign_id": "search",
+      "cost_cents": 10000,
+      "impressions": 1000,
+      "clicks": 100,
+      "spend_dollars": "110.00"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "source": "campaigns",
+  "batch_id": "01-campaigns",
+  "schema_version": 1,
+  "covered_through": "2026-09-03",
+  "rows": [
+    {
+      "id": "search",
+      "revision": 1,
+      "op": "upsert",
+      "name": "Search"
+    },
+    {
+      "id": "social",
+      "revision": 1,
+      "op": "upsert",
+      "name": "Social"
+    }
+  ]
+}

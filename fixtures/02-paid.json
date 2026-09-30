@@ -1,0 +1,48 @@
+{
+  "source": "paid_media",
+  "batch_id": "02-paid",
+  "schema_version": 1,
+  "covered_through": "2026-09-03",
+  "rows": [
+    {
+      "id": "p1",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-01",
+      "campaign_id": "search",
+      "cost_cents": 10000,
+      "impressions": 1000,
+      "clicks": 100
+    },
+    {
+      "id": "p2",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-01",
+      "campaign_id": "social",
+      "cost_cents": 6000,
+      "impressions": 600,
+      "clicks": 60
+    },
+    {
+      "id": "p3",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-02",
+      "campaign_id": "search",
+      "cost_cents": 12000,
+      "impressions": 1200,
+      "clicks": 120
+    },
+    {
+      "id": "p4",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-03",
+      "campaign_id": "social",
+      "cost_cents": 8000,
+      "impressions": 800,
+      "clicks": 80
+    }
+  ]
+}

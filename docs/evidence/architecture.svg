@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+<title id="title">MarTech Data Reliability architecture</title>
+<desc id="desc">CRM, web, paid media and campaign files flow through content-addressed landing, contracts, revision tracking, SQL and independent aggregation, reconciliation gates, atomic publication, and published reporting with lineage.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1e40af"/></marker></defs>
+<style>
+text{font-family:Arial,sans-serif;font-size:15px;fill:#0f172a}
+.box{stroke-width:2}
+.line{stroke:#1e40af;stroke-width:2;fill:none;marker-end:url(#arrow)}
+.light{fill:#dbeafe;stroke:#2563eb}.foundation{fill:#bfdbfe;stroke:#1d4ed8}.process{fill:#93c5fd;stroke:#1e40af}.control{fill:#60a5fa;stroke:#1e3a8a}.output{fill:#2563eb;stroke:#1e3a8a}
+.white{fill:#fff}
+</style>
+<g text-anchor="middle">
+<rect class="box light" x="275" y="15" width="350" height="48" rx="8"/><text x="450" y="44">CRM, web, paid media and campaign files</text>
+<path class="line" d="M450 63 V92"/>
+<rect class="box foundation" x="315" y="92" width="270" height="48" rx="8"/><text x="450" y="121">Content-addressed landing</text>
+<path class="line" d="M450 140 V169"/>
+<rect class="box foundation" x="305" y="169" width="290" height="48" rx="8"/><text x="450" y="198">Closed contracts and row receipts</text>
+<path class="line" d="M380 217 L240 257"/><path class="line" d="M520 217 L660 257"/>
+<rect class="box control" x="80" y="257" width="320" height="48" rx="8"/><text class="white" x="240" y="286">Quarantine and rejected deliveries</text>
+<rect class="box foundation" x="505" y="257" width="310" height="48" rx="8"/><text x="660" y="286">Revision ledger and dirty dates</text>
+<path class="line" d="M660 305 V334"/>
+<rect class="box foundation" x="560" y="334" width="200" height="48" rx="8"/><text x="660" y="363">Pinned run inputs</text>
+<path class="line" d="M625 382 L515 420"/><path class="line" d="M695 382 L805 420"/>
+<rect class="box process" x="350" y="420" width="300" height="48" rx="8"/><text x="500" y="449">SQL campaign daily candidate</text>
+<rect class="box process" x="670" y="420" width="220" height="48" rx="8"/><text x="780" y="449">Independent full aggregation</text>
+<path class="line" d="M500 468 L575 506"/><path class="line" d="M780 468 L650 506"/>
+<rect class="box control" x="450" y="506" width="310" height="48" rx="8"/><text class="white" x="605" y="535">Reconciliation and freshness gates</text>
+<path class="line" d="M605 554 V576"/>
+<rect class="box output" x="455" y="576" width="300" height="38" rx="8"/><text class="white" x="605" y="601">Atomic publication → report + lineage</text>
+</g></svg>

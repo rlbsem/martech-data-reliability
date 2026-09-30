@@ -1,0 +1,21 @@
+{
+  "source": "crm",
+  "batch_id": "07-crm-corrections",
+  "schema_version": 1,
+  "covered_through": "2026-09-06",
+  "rows": [
+    {
+      "id": "o2",
+      "revision": 2,
+      "op": "upsert",
+      "day": "2026-09-03",
+      "campaign_id": "search",
+      "revenue_cents": 65000
+    },
+    {
+      "id": "o3",
+      "revision": 2,
+      "op": "delete"
+    }
+  ]
+}

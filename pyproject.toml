@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "martech-data-reliability"
+version = "1.0.0"
+description = "Reconciled marketing warehouse pipelines with recoverable ingestion and controlled rebuilds"
+requires-python = ">=3.12"
+dependencies = ["duckdb==1.3.2"]
+
+[project.scripts]
+marketing-pipeline = "marketing_reliability.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+marketing_reliability = ["sql/*.sql"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["scripts"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100

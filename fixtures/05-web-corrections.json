@@ -1,0 +1,53 @@
+{
+  "source": "web",
+  "batch_id": "05-web-corrections",
+  "schema_version": 1,
+  "covered_through": "2026-09-06",
+  "rows": [
+    {
+      "id": "w6",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-01",
+      "campaign_id": "social",
+      "conversions": 1
+    },
+    {
+      "id": "w1",
+      "revision": 2,
+      "op": "upsert",
+      "day": "2026-09-02",
+      "campaign_id": "search",
+      "conversions": 1
+    },
+    {
+      "id": "w5",
+      "revision": 2,
+      "op": "delete"
+    },
+    {
+      "id": "w1",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-01",
+      "campaign_id": "search",
+      "conversions": 1
+    },
+    {
+      "id": "bad",
+      "revision": 2,
+      "op": "upsert",
+      "day": "2026-09-01",
+      "campaign_id": "social",
+      "conversions": 1
+    },
+    {
+      "id": "w7",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-03",
+      "campaign_id": "partner",
+      "conversions": 1
+    }
+  ]
+}

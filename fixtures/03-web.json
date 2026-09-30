@@ -1,0 +1,64 @@
+{
+  "source": "web",
+  "batch_id": "03-web",
+  "schema_version": 1,
+  "covered_through": "2026-09-03",
+  "rows": [
+    {
+      "id": "w1",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-01",
+      "campaign_id": "search",
+      "conversions": 1
+    },
+    {
+      "id": "w2",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-01",
+      "campaign_id": "search",
+      "conversions": 0
+    },
+    {
+      "id": "w3",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-01",
+      "campaign_id": "social",
+      "conversions": 1
+    },
+    {
+      "id": "w4",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-02",
+      "campaign_id": "search",
+      "conversions": 1
+    },
+    {
+      "id": "w5",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-03",
+      "campaign_id": "social",
+      "conversions": 1
+    },
+    {
+      "id": "w1",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-01",
+      "campaign_id": "search",
+      "conversions": 1
+    },
+    {
+      "id": "bad",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-01",
+      "campaign_id": "social",
+      "conversions": "1"
+    }
+  ]
+}

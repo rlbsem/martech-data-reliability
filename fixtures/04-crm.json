@@ -1,0 +1,32 @@
+{
+  "source": "crm",
+  "batch_id": "04-crm",
+  "schema_version": 1,
+  "covered_through": "2026-09-03",
+  "rows": [
+    {
+      "id": "o1",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-01",
+      "campaign_id": "search",
+      "revenue_cents": 50000
+    },
+    {
+      "id": "o2",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-02",
+      "campaign_id": "search",
+      "revenue_cents": 70000
+    },
+    {
+      "id": "o3",
+      "revision": 1,
+      "op": "upsert",
+      "day": "2026-09-03",
+      "campaign_id": "social",
+      "revenue_cents": 30000
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "source": "campaigns",
+  "batch_id": "08-campaign-repair",
+  "schema_version": 1,
+  "covered_through": "2026-09-06",
+  "rows": [
+    {
+      "id": "partner",
+      "revision": 1,
+      "op": "upsert",
+      "name": "Partner"
+    },
+    {
+      "id": "search",
+      "revision": 2,
+      "op": "upsert",
+      "name": "Paid Search"
+    }
+  ]
+}

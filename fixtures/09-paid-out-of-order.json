@@ -1,0 +1,18 @@
+{
+  "source": "paid_media",
+  "batch_id": "09-paid-out-of-order",
+  "schema_version": 1,
+  "covered_through": "2026-09-06",
+  "rows": [
+    {
+      "id": "p1",
+      "revision": 2,
+      "op": "upsert",
+      "day": "2026-09-01",
+      "campaign_id": "search",
+      "cost_cents": 999,
+      "impressions": 1000,
+      "clicks": 100
+    }
+  ]
+}
