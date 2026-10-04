@@ -8,6 +8,26 @@ Start with the [executed result](docs/evidence/report.md). In the synthetic demo
 
 **All data, source systems and business outcomes are synthetic. This is an independent engineering demonstration, not a client implementation or production experience claim.** Published totals exclude quarantined rows; the evidence reports those exclusions explicitly.
 
+```mermaid
+flowchart LR
+  A[Late, repeated or corrected deliveries] --> B[Retained bytes + closed contracts]
+  B --> Q[Reject incompatible schema / quarantine bad rows]
+  B --> C[Revision ledger + affected dates]
+  C --> S[Cross-grain SQL candidate]
+  C --> O[Independent full aggregation]
+  S --> G{Values, references and freshness agree?}
+  O --> G
+  G -->|Pass| P[Atomically publish report + lineage]
+  G -->|Fail| K[Keep last validated publication]
+  C -. persisted work / crash retry .-> C
+  classDef hold fill:#fff4cc,stroke:#946800,color:#302300;
+  classDef publish fill:#edf7ee,stroke:#246634,color:#163b20;
+  class Q,K hold;
+  class P publish;
+```
+
+*Candidate computation and independent reconciliation are separate. Failure preserves the last publication; corrections never erase the original deliveries.*
+
 ## What runs
 
 | Reliability problem | Executed behavior |
@@ -20,33 +40,6 @@ Start with the [executed result](docs/evidence/report.md). In the synthetic demo
 | Process termination | Eight real subprocess crash experiments reopen and retry persisted work |
 | Historical rebuild | One-day and full rebuilds match an independent full Python aggregation |
 | Equal counts, wrong values | Metric corruption fails reconciliation before publication |
-
-```mermaid
-flowchart TB
-    A[CRM, web, paid media and campaign files] --> B[Content-addressed landing]
-    B --> C[Closed contracts and row receipts]
-    C --> Q[Quarantine and rejected deliveries]
-    C --> D[Revision ledger and dirty dates]
-    D --> E[Pinned run inputs]
-    E --> F[SQL campaign daily candidate]
-    E --> G[Independent full aggregation]
-    F --> H[Reconciliation and freshness gates]
-    G --> H
-    H --> I[Atomic publication pointer]
-    I --> J[Published report and source lineage]
-
-    classDef input fill:#dbeafe,stroke:#2563eb,color:#0f172a,stroke-width:2px;
-    classDef foundation fill:#bfdbfe,stroke:#1d4ed8,color:#0f172a,stroke-width:2px;
-    classDef process fill:#93c5fd,stroke:#1e40af,color:#0f172a,stroke-width:2px;
-    classDef control fill:#60a5fa,stroke:#1e3a8a,color:#ffffff,stroke-width:2px;
-    classDef output fill:#2563eb,stroke:#1e3a8a,color:#ffffff,stroke-width:2px;
-
-    class A input;
-    class B,C,D,E foundation;
-    class F,G process;
-    class Q,H,I control;
-    class J output;
-```
 
 Python handles admission and run transitions; **DuckDB executes the warehouse SQL and transactions**. The local landing directory preserves delivery bytes. No cloud account, database service, Docker engine or API key is required. [Architecture and tradeoffs](docs/architecture.md) explain the single-writer boundary and why this project uses explicit SQL rather than dbt or an orchestration service.
 

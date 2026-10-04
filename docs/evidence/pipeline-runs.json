@@ -36,10 +36,46 @@
         "status": "published"
       },
       "table": [
-        ["2026-09-01","search","Search",10000,1000,100,1,50000],
-        ["2026-09-01","social","Social",6000,600,60,1,0],
-        ["2026-09-02","search","Search",12000,1200,120,1,70000],
-        ["2026-09-03","social","Social",8000,800,80,1,30000]
+        [
+          "2026-09-01",
+          "search",
+          "Search",
+          10000,
+          1000,
+          100,
+          1,
+          50000
+        ],
+        [
+          "2026-09-01",
+          "social",
+          "Social",
+          6000,
+          600,
+          60,
+          1,
+          0
+        ],
+        [
+          "2026-09-02",
+          "search",
+          "Search",
+          12000,
+          1200,
+          120,
+          1,
+          70000
+        ],
+        [
+          "2026-09-03",
+          "social",
+          "Social",
+          8000,
+          800,
+          80,
+          1,
+          30000
+        ]
       ]
     },
     {
@@ -55,11 +91,22 @@
             "coverage outside 0..1 day freshness window: web",
             "coverage outside 0..1 day freshness window: crm"
           ],
-          "coverage_lag_days": {"campaigns":3,"crm":3,"paid_media":3,"web":3},
+          "coverage_lag_days": {
+            "campaigns": 3,
+            "crm": 3,
+            "paid_media": 3,
+            "web": 3
+          },
           "independent_full_match": true,
           "row_count": 4,
           "table_sha256": "3a8865efea7a8176143174fc19c612a9ac165f2918ecfdc3de11b29b86bf7cda",
-          "totals": {"clicks":360,"conversions":4,"cost_cents":36000,"impressions":3600,"revenue_cents":150000},
+          "totals": {
+            "clicks": 360,
+            "conversions": 4,
+            "cost_cents": 36000,
+            "impressions": 3600,
+            "revenue_cents": 150000
+          },
           "unresolved": []
         },
         "id": 2,
@@ -75,20 +122,46 @@
         "base": 1,
         "epoch": 7,
         "evidence": {
-          "blockers": ["unresolved campaign references","coverage outside 0..1 day freshness window: campaigns"],
-          "coverage_lag_days": {"campaigns":3,"crm":0,"paid_media":0,"web":0},
+          "blockers": [
+            "unresolved campaign references",
+            "coverage outside 0..1 day freshness window: campaigns"
+          ],
+          "coverage_lag_days": {
+            "campaigns": 3,
+            "crm": 0,
+            "paid_media": 0,
+            "web": 0
+          },
           "independent_full_match": true,
           "row_count": 5,
           "table_sha256": "838fb855d8a73c612cd28fb82bb06c2c1bce982e819a8dae45d7536ba35a1299",
-          "totals": {"clicks":360,"conversions":5,"cost_cents":37000,"impressions":3600,"revenue_cents":115000},
+          "totals": {
+            "clicks": 360,
+            "conversions": 5,
+            "cost_cents": 37000,
+            "impressions": 3600,
+            "revenue_cents": 115000
+          },
           "unresolved": [
-            {"campaign_id":"partner","id":"p5","source":"paid_media"},
-            {"campaign_id":"partner","id":"w7","source":"web"}
+            {
+              "campaign_id": "partner",
+              "id": "p5",
+              "source": "paid_media"
+            },
+            {
+              "campaign_id": "partner",
+              "id": "w7",
+              "source": "web"
+            }
           ]
         },
         "id": 3,
         "implementation": "1a482f9edf5a459a5c9b2ba72317f87c358223642c5913d60247a67867c37202",
-        "scope": ["2026-09-01","2026-09-02","2026-09-03"],
+        "scope": [
+          "2026-09-01",
+          "2026-09-02",
+          "2026-09-03"
+        ],
         "status": "built"
       }
     },
@@ -100,25 +173,94 @@
         "epoch": 9,
         "evidence": {
           "blockers": [],
-          "coverage_lag_days": {"campaigns":0,"crm":0,"paid_media":0,"web":0},
+          "coverage_lag_days": {
+            "campaigns": 0,
+            "crm": 0,
+            "paid_media": 0,
+            "web": 0
+          },
           "independent_full_match": true,
           "row_count": 6,
           "table_sha256": "5e0926c7ab93679394b4bef8c23c5869d2e15bf5b709b7c1180887198871fded",
-          "totals": {"clicks":400,"conversions":6,"cost_cents":41000,"impressions":4000,"revenue_cents":115000},
+          "totals": {
+            "clicks": 400,
+            "conversions": 6,
+            "cost_cents": 41000,
+            "impressions": 4000,
+            "revenue_cents": 115000
+          },
           "unresolved": []
         },
         "id": 4,
         "implementation": "1a482f9edf5a459a5c9b2ba72317f87c358223642c5913d60247a67867c37202",
-        "scope": ["2026-09-01","2026-09-02","2026-09-03"],
+        "scope": [
+          "2026-09-01",
+          "2026-09-02",
+          "2026-09-03"
+        ],
         "status": "published"
       },
       "table": [
-        ["2026-09-01","search","Paid Search",11000,1000,100,0,50000],
-        ["2026-09-01","social","Social",6000,600,60,3,0],
-        ["2026-09-02","search","Paid Search",12000,1200,120,2,0],
-        ["2026-09-03","partner","Partner",4000,400,40,1,0],
-        ["2026-09-03","search","Paid Search",0,0,0,0,65000],
-        ["2026-09-03","social","Social",8000,800,80,0,0]
+        [
+          "2026-09-01",
+          "search",
+          "Paid Search",
+          11000,
+          1000,
+          100,
+          0,
+          50000
+        ],
+        [
+          "2026-09-01",
+          "social",
+          "Social",
+          6000,
+          600,
+          60,
+          3,
+          0
+        ],
+        [
+          "2026-09-02",
+          "search",
+          "Paid Search",
+          12000,
+          1200,
+          120,
+          2,
+          0
+        ],
+        [
+          "2026-09-03",
+          "partner",
+          "Partner",
+          4000,
+          400,
+          40,
+          1,
+          0
+        ],
+        [
+          "2026-09-03",
+          "search",
+          "Paid Search",
+          0,
+          0,
+          0,
+          0,
+          65000
+        ],
+        [
+          "2026-09-03",
+          "social",
+          "Social",
+          8000,
+          800,
+          80,
+          0,
+          0
+        ]
       ]
     },
     {
@@ -129,16 +271,29 @@
         "epoch": 9,
         "evidence": {
           "blockers": [],
-          "coverage_lag_days": {"campaigns":0,"crm":0,"paid_media":0,"web":0},
+          "coverage_lag_days": {
+            "campaigns": 0,
+            "crm": 0,
+            "paid_media": 0,
+            "web": 0
+          },
           "independent_full_match": true,
           "row_count": 6,
           "table_sha256": "5e0926c7ab93679394b4bef8c23c5869d2e15bf5b709b7c1180887198871fded",
-          "totals": {"clicks":400,"conversions":6,"cost_cents":41000,"impressions":4000,"revenue_cents":115000},
+          "totals": {
+            "clicks": 400,
+            "conversions": 6,
+            "cost_cents": 41000,
+            "impressions": 4000,
+            "revenue_cents": 115000
+          },
           "unresolved": []
         },
         "id": 5,
         "implementation": "1a482f9edf5a459a5c9b2ba72317f87c358223642c5913d60247a67867c37202",
-        "scope": ["2026-09-01"],
+        "scope": [
+          "2026-09-01"
+        ],
         "status": "published"
       }
     },
@@ -150,16 +305,31 @@
         "epoch": 9,
         "evidence": {
           "blockers": [],
-          "coverage_lag_days": {"campaigns":0,"crm":0,"paid_media":0,"web":0},
+          "coverage_lag_days": {
+            "campaigns": 0,
+            "crm": 0,
+            "paid_media": 0,
+            "web": 0
+          },
           "independent_full_match": true,
           "row_count": 6,
           "table_sha256": "5e0926c7ab93679394b4bef8c23c5869d2e15bf5b709b7c1180887198871fded",
-          "totals": {"clicks":400,"conversions":6,"cost_cents":41000,"impressions":4000,"revenue_cents":115000},
+          "totals": {
+            "clicks": 400,
+            "conversions": 6,
+            "cost_cents": 41000,
+            "impressions": 4000,
+            "revenue_cents": 115000
+          },
           "unresolved": []
         },
         "id": 6,
         "implementation": "1a482f9edf5a459a5c9b2ba72317f87c358223642c5913d60247a67867c37202",
-        "scope": ["2026-09-01","2026-09-02","2026-09-03"],
+        "scope": [
+          "2026-09-01",
+          "2026-09-02",
+          "2026-09-03"
+        ],
         "status": "published"
       }
     }

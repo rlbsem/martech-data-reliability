@@ -1,5 +1,5 @@
 {
-  "verified_at_utc": "2026-09-30T05:00:29.774373+00:00",
+  "verified_at_utc": "2026-10-04T00:53:20.538560+00:00",
   "platform": "Windows-11-10.0.26200-SP0",
   "python": "3.12.14",
   "duckdb": "1.3.2",
@@ -12,17 +12,17 @@
   "crash_experiments": 8,
   "demo_byte_reproducible": true,
   "installed_package_matches_source": true,
-  "installation": "installed wheel",
+  "installation": "source/editable",
   "wheel_source_and_sql_members_checked": 7,
   "internal_markdown_links_checked": 31,
   "dependency_check": "passed",
   "lint": "passed",
   "format": "passed",
   "implementation_sha256": "1a482f9edf5a459a5c9b2ba72317f87c358223642c5913d60247a67867c37202",
-  "source_fingerprint": "a5a3412a5b49e0607f4a930f86b17292a9027e283185d9090ebb45d57ecaf489",
+  "source_fingerprint": "85868bb9aef3845181ab6bb2c8eb3e1b855d3fdd93fded7216d71adc039fc012",
   "source_files": {
     ".gitattributes": "23302dd90b8bb74b44d365fafef8df20f809b61cb347023951ecf60a88a29651",
-    ".github/workflows/verify.yml": "5e8bbcac85ce58b989cfc363f8574d019159f7b9d04bbc89d13e624250c49472",
+    ".github/workflows/verify.yml": "8d2add78cdbe337bbf204f3629861df505033535ec1900bed356abe48be47534",
     ".gitignore": "460a6ce203cdb4f1785c96918af34f2ad5a7031ee6e29fdbe2f08116d847a784",
     "docs/architecture.md": "3d8ccee5d596a8470cb5c50a76c3e297d13b37346aef4f0d2dd2c1c3f33322e0",
     "docs/cloud-translation.md": "b09c2ba315e56752fbefc70c6c537fbd00c595ddd223a54d58921b16d163822b",
@@ -43,10 +43,10 @@
     "fixtures/10-unsupported-schema.json": "d022686318b3845a21829626dd373e21e4a2ae57b9457ea5a13f9327e08da340",
     "LICENSE": "bfa35d897efdd7b0c543024c4d8a4d39feb8d9132f5432c1644f7f74443b4c13",
     "pyproject.toml": "e879f31d82644779a34b74ed93b0b4c777bd88e570877ba2da1b11d1aa7a74e4",
-    "README.md": "043cd9657a628b0c6a86ca566adb5a4b5a354ef3396023ab151a41b47dbb0b97",
+    "README.md": "837882f79013cbc888c44c2c7c6f4b89739daedecdfa846c6d028191d2975cba",
     "requirements.lock": "578d7fd0a42d90e745fce2ecb7c95e5af6cff56d0ba3f1c9381a9ac355cb9021",
     "scripts/crash_proof.py": "aa8dfa3c7d25b01519c41e1a6f6d6c3a67aaf5d561f3d635b6c70f7a7edbf29f",
-    "scripts/demo.py": "13ad998cfb6fd2e57be4e2fe06fbbaf221512603f596ba720f450047d24b5d90",
+    "scripts/demo.py": "123da804ac733c5c865807e05bd4e36253deb62780656263e5ceddd8565b2485",
     "scripts/make_fixtures.py": "e7c98873aa1adb9179a9cb23c986cf794705ca66b6885080e20d3fdd8272f3fb",
     "scripts/package.py": "300dc80e29ed4712c2ce56e5b6b091d9d3bc33e3e7b33b4fb4c8ce3297f160dc",
     "scripts/repository.py": "cd192a86373d02e8f90b021cf915be512b50d0fe503474ca44ee631dda3a670d",
@@ -72,6 +72,6 @@
     "reconciliation.json": "455e276f61ae00339f4f4afb3a6dc25064a2053f7f7e6eb50ad2134cb42a449c",
     "recovery.json": "8a9d498b01e589ee06a7f2240362b4b9c28098dcb25840eb3eb90919223fe951",
     "report.md": "4aa84dbc3a3fa1dc24d451b47c3896c747c08093ffee65600b533cd34d764e2b",
-    "tests.xml": "62e41e108dfd108d0939df333a5db95b3bcbdd99030d96db62cb00b6302ed30f"
+    "tests.xml": "934b4bf7a2406e9cb57909ec8b870245608afcc0cf2a17ba4977c148987fd347"
   }
 }
