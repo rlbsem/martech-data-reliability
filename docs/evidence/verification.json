@@ -1,5 +1,5 @@
 {
-  "verified_at_utc": "2026-10-04T00:53:20.538560+00:00",
+  "verified_at_utc": "2026-10-08T19:38:09.912771+00:00",
   "platform": "Windows-11-10.0.26200-SP0",
   "python": "3.12.14",
   "duckdb": "1.3.2",
@@ -19,7 +19,7 @@
   "lint": "passed",
   "format": "passed",
   "implementation_sha256": "1a482f9edf5a459a5c9b2ba72317f87c358223642c5913d60247a67867c37202",
-  "source_fingerprint": "85868bb9aef3845181ab6bb2c8eb3e1b855d3fdd93fded7216d71adc039fc012",
+  "source_fingerprint": "ab8933877b83dd3f3596467d981ff8a04b9e0423767891fb7f87625063b50489",
   "source_files": {
     ".gitattributes": "23302dd90b8bb74b44d365fafef8df20f809b61cb347023951ecf60a88a29651",
     ".github/workflows/verify.yml": "8d2add78cdbe337bbf204f3629861df505033535ec1900bed356abe48be47534",
@@ -43,10 +43,10 @@
     "fixtures/10-unsupported-schema.json": "d022686318b3845a21829626dd373e21e4a2ae57b9457ea5a13f9327e08da340",
     "LICENSE": "bfa35d897efdd7b0c543024c4d8a4d39feb8d9132f5432c1644f7f74443b4c13",
     "pyproject.toml": "e879f31d82644779a34b74ed93b0b4c777bd88e570877ba2da1b11d1aa7a74e4",
-    "README.md": "837882f79013cbc888c44c2c7c6f4b89739daedecdfa846c6d028191d2975cba",
+    "README.md": "30a85051b490afd815e8a259923662745e93ff76df529402d14c92dfe184014a",
     "requirements.lock": "578d7fd0a42d90e745fce2ecb7c95e5af6cff56d0ba3f1c9381a9ac355cb9021",
     "scripts/crash_proof.py": "aa8dfa3c7d25b01519c41e1a6f6d6c3a67aaf5d561f3d635b6c70f7a7edbf29f",
-    "scripts/demo.py": "123da804ac733c5c865807e05bd4e36253deb62780656263e5ceddd8565b2485",
+    "scripts/demo.py": "1a9b26e9856373caaeb1ed5afa040d5e1ffe54b02bb485b6adca13f16b05ee50",
     "scripts/make_fixtures.py": "e7c98873aa1adb9179a9cb23c986cf794705ca66b6885080e20d3fdd8272f3fb",
     "scripts/package.py": "300dc80e29ed4712c2ce56e5b6b091d9d3bc33e3e7b33b4fb4c8ce3297f160dc",
     "scripts/repository.py": "cd192a86373d02e8f90b021cf915be512b50d0fe503474ca44ee631dda3a670d",
@@ -71,7 +71,7 @@
     "pipeline-runs.json": "90758a3136674029c97ea469f8ca3e2ff3367a923c534cbb1eb4be557c0b7c34",
     "reconciliation.json": "455e276f61ae00339f4f4afb3a6dc25064a2053f7f7e6eb50ad2134cb42a449c",
     "recovery.json": "8a9d498b01e589ee06a7f2240362b4b9c28098dcb25840eb3eb90919223fe951",
-    "report.md": "4aa84dbc3a3fa1dc24d451b47c3896c747c08093ffee65600b533cd34d764e2b",
-    "tests.xml": "934b4bf7a2406e9cb57909ec8b870245608afcc0cf2a17ba4977c148987fd347"
+    "report.md": "95c9ffa69209b93ddc9715d46493a6445c89151b7fa30bc675ac1fac00596a0e",
+    "tests.xml": "f2358984aa869c3d32cdb9b5572885547340c9d7622e8f5924893e99730c0cb7"
   }
 }

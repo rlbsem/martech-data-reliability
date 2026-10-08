@@ -4,9 +4,9 @@
 
 This executable warehouse pipeline keeps the original deliveries, explains rejected and quarantined data, and publishes a new report only after reconciliation. A failed load or rebuild leaves the previous publication available.
 
-Start with the [executed result](docs/evidence/report.md). In the synthetic demonstration, corrected spend moves from **36,000 to 41,000 USD cents**, web conversions from **4 to 6**, and CRM revenue from **150,000 to 115,000 USD cents**. Each variance has a source-record explanation. A late lower revision cannot overwrite a newer correction. Missing campaign references and stale source coverage block publication.
+Start with the [executed result](docs/evidence/report.md). In the synthetic demonstration, corrected spend moves from **$360 to $410**, web conversions from **4 to 6**, and CRM revenue from **$1,500 to $1,150**. Each variance has a source-record explanation. A late lower revision cannot overwrite a newer correction. Missing campaign references and stale source coverage block publication.
 
-**All data, source systems and business outcomes are synthetic. This is an independent engineering demonstration, not a client implementation or production experience claim.** Published totals exclude quarantined rows; the evidence reports those exclusions explicitly.
+Published totals exclude quarantined rows; the evidence reports those exclusions explicitly.
 
 ```mermaid
 flowchart LR
