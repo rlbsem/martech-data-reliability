@@ -1,11 +1,19 @@
 {
-  "renderer": "Mermaid 10.9.3",
-  "browser": "Microsoft Edge headless through Playwright",
+  "status": "visually_restyled",
+  "verification_scope": "SVG palette/text SVG syntax changed and README Mermaid styled; no fresh browser render recorded",
   "source": "README.md Mermaid block",
-  "source_sha256": "d3316d2be4fb60013f284290520a340de82ac3f484828132682da6c003b1d55c",
-  "svg_sha256": "3f9e63c06d1a851f99f9c0be7f0ade2844c84bc12d13813ae81c6e340842f8c8",
-  "nodes": 11,
-  "width": 700.859375,
-  "height": 722,
-  "status": "rendered"
+  "source_sha256": "0ff14cb22025cb585d6684c4ce9856835b3d67c05b2b0c8a24bd67c2b2982caa",
+  "svg_sha256": "616f528ce1ade722df8fe9b7878c36a99b230aa09f935cbf0391b02806989451",
+  "historical_render_check": {
+    "renderer": "Mermaid 10.9.3",
+    "browser": "Microsoft Edge headless through Playwright",
+    "source": "README.md Mermaid block",
+    "source_sha256": "d3316d2be4fb60013f284290520a340de82ac3f484828132682da6c003b1d55c",
+    "svg_sha256": "3f9e63c06d1a851f99f9c0be7f0ade2844c84bc12d13813ae81c6e340842f8c8",
+    "nodes": 11,
+    "width": 700.859375,
+    "height": 722,
+    "status": "rendered"
+  },
+  "note": "Historical render metadata is retained for provenance. This restyle does not claim to reproduce the original Mermaid 10.9.3 dimensions."
 }

@@ -9,6 +9,7 @@ Start with the [executed result](docs/evidence/report.md). In the synthetic demo
 Published totals exclude quarantined rows; the evidence reports those exclusions explicitly.
 
 ```mermaid
+%%{init: {"theme":"base","themeVariables":{"background":"#10101D","primaryColor":"#2A2A3D","primaryTextColor":"#F0F0FF","primaryBorderColor":"#7C7CAF","lineColor":"#B8B8FF","textColor":"#F0F0FF","secondaryColor":"#181825","tertiaryColor":"#2E2E45","fontFamily":"IBM Plex Sans, Arial, sans-serif","fontSize":"15px","edgeLabelBackground":"#10101D"}}}%%
 flowchart LR
   A[Late, repeated or corrected deliveries] --> B[Retained bytes + closed contracts]
   B --> Q[Reject incompatible schema / quarantine bad rows]
@@ -20,8 +21,12 @@ flowchart LR
   G -->|Pass| P[Atomically publish report + lineage]
   G -->|Fail| K[Keep last validated publication]
   C -. persisted work / crash retry .-> C
-  classDef hold fill:#fff4cc,stroke:#946800,color:#302300;
-  classDef publish fill:#edf7ee,stroke:#246634,color:#163b20;
+  classDef hold fill:#2E2E45,stroke:#E3BC7F,color:#F0F0FF,stroke-width:2px;
+  classDef publish fill:#2E2E45,stroke:#81C5B0,color:#F0F0FF,stroke-width:2px;
+  classDef process fill:#2A2A3D,stroke:#B8B8FF,color:#F0F0FF,stroke-width:1.6px;
+  classDef decision fill:#2E2E45,stroke:#7C7CAF,color:#F0F0FF,stroke-width:1.7px;
+  class A,B,C,S,O process;
+  class G decision;
   class Q,K hold;
   class P publish;
 ```
