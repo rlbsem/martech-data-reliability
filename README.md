@@ -48,6 +48,8 @@ flowchart LR
 
 Python handles admission and run transitions; **DuckDB executes the warehouse SQL and transactions**. The local landing directory preserves delivery bytes. No cloud account, database service, Docker engine or API key is required. [Architecture and tradeoffs](docs/architecture.md) explain the single-writer boundary and why this project uses explicit SQL rather than dbt or an orchestration service.
 
+For the related problem of defining and reconciling commercial measures, see [Revenue Metrics Platform](https://github.com/rlbsem/revenue-metrics-platform#revenue-definitions-in-operating-systems).
+
 ## Inspect the demonstration
 
 - [Business result and explained variance](docs/evidence/report.md)
