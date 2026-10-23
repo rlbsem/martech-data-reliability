@@ -1,4 +1,4 @@
-# Eight-minute walkthrough
+# Engineering demonstration walkthrough
 
 ## 0:00–1:00 — Begin with the business consequence
 
@@ -28,19 +28,6 @@ Open [recovery evidence](evidence/recovery.json). Each process exited abruptly w
 
 Compare the one-day and full rebuild runs. A candidate copies untouched partitions and rebuilds selected dates. The independent Python aggregator checks the entire resulting table; a too-narrow correction scope fails. This provides strong correctness evidence at small scale, while full validation and copied snapshots limit performance.
 
-## 7:00–8:00 — State the honest operating boundary
+## 7:00–8:00 — Verify operating boundaries
 
 Show [verification](evidence/verification.json), then [cloud translation](cloud-translation.md). Explain installed-wheel testing and local execution. AWS, Redshift, live CRM/ad APIs, distributed writers and hosted CI were not executed. Redshift's unenforced uniqueness constraints are an example of why moving SQL alone would not prove equivalent reliability.
-
-## Questions this project lets Richard answer in an interview
-
-- **How do you distinguish duplicate deliveries from duplicate business records?** Byte-addressed receipts versus source/ID/revision and normalized payload comparison.
-- **What makes an incremental model wrong after a correction?** Rebuilding only the new date leaves an old contribution behind; the full oracle exposes it.
-- **How do you evolve a contract?** Explicit v1/v2 interpretation, common normalized meaning and refusal of undeclared changes.
-- **Is a fresh feed complete?** No. Coverage, quarantine and unresolved references express different evidence.
-- **When should bad data stop reporting?** Here malformed rows are disclosed exclusions, while unresolved references and stale feeds block a new publication. A financial-close policy would need stricter admission/completeness gates.
-- **How do you recover after a process dies?** Query durable receipts/status, retry the same identity, and avoid advancing a publication separately from its commit.
-- **How do you validate SQL beyond row counts?** Compare every dimension/measure to a separate Python aggregation and inject equal-count corruption.
-- **What does a safe backfill change?** Only selected candidate partitions; exposure waits for full reconciliation and current-epoch checks.
-- **Why no dbt, Airflow or SCD2?** One model and explicit transactional boundaries make them unnecessary here; discuss when a larger DAG or different history requirement changes that decision.
-- **What would break in a cloud port?** Different write coordination, loading semantics and unenforced warehouse keys require new proofs, not renamed components.
