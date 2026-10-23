@@ -59,7 +59,7 @@ For the related problem of defining and reconciling commercial measures, see [Re
 - [Record-level source lineage](docs/evidence/lineage.json)
 - [Tests, environment and source hashes](docs/evidence/verification.json)
 
-The [eight-minute walkthrough](docs/interview-walkthrough.md) follows these artifacts. [Portfolio positioning](docs/portfolio-positioning.md) explains the distinct proof: recurring source-to-warehouse reliability, alongside six projects focused on other engineering problems.
+The [engineering demonstration walkthrough](docs/interview-walkthrough.md) traces those artifacts from admission to publication. [Architecture scope and related systems](docs/portfolio-positioning.md) distinguish this ingestion and analytics boundary from the other implementations.
 
 ## Reproduce
 
