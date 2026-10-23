@@ -30,4 +30,4 @@ Compare the one-day and full rebuild runs. A candidate copies untouched partitio
 
 ## 7:00–8:00 — Verify operating boundaries
 
-Show [verification](evidence/verification.json), then [cloud translation](cloud-translation.md). Explain installed-wheel testing and local execution. AWS, Redshift, live CRM/ad APIs, distributed writers and hosted CI were not executed. Redshift's unenforced uniqueness constraints are an example of why moving SQL alone would not prove equivalent reliability.
+Show [verification](evidence/verification.json), then [cloud translation](cloud-translation.md). Explain installed-wheel testing and local execution. AWS, Redshift, live CRM/ad APIs and distributed writers were not executed. [Hosted GitHub Actions verification](https://github.com/rlbsem/martech-data-reliability/actions) passed on Windows and Ubuntu for the published build. Redshift's unenforced uniqueness constraints are an example of why moving SQL alone would not prove equivalent reliability.
