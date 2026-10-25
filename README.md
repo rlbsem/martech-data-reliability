@@ -1,5 +1,7 @@
 # MarTech Data Reliability
 
+**Business impact:** Protect executive reporting and commercial decisions from stale updates, missing coverage and invalid source feeds. Contract-checked ingestion, quarantine, correction handling and governed publication keep unreliable inputs from silently replacing trusted metrics.
+
 **Can Marketing trust its campaign report after feeds arrive late, repeat deliveries, change schemas, or correct last week's numbers?**
 
 This executable warehouse pipeline keeps the original deliveries, explains rejected and quarantined data, and publishes a new report only after reconciliation. A failed load or rebuild leaves the previous publication available.
