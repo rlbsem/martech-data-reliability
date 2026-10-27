@@ -6,3 +6,5 @@
 header>div,.scope{min-width:0}.scope select{width:100%;min-width:0;max-width:100%}
 
 @media(max-width:720px){.metric strong{font-size:22px}}
+
+.table.wide table{min-width:1100px}.table.wide th,.table.wide td{min-width:95px;overflow-wrap:normal}

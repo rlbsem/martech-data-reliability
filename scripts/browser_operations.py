@@ -146,7 +146,9 @@ def browser_check(url, output):
         }
         page.set_viewport_size({"width": 390, "height": 1000})
         page.locator('[data-view="sources"]').click()
-        page.locator("#panel").scroll_into_view_if_needed()
+        page.get_by_role(
+            "heading", name="A successful request is not a completeness assertion.", exact=True
+        ).evaluate("e=>e.scrollIntoView({block:'start'})")
         page.screenshot(path=str(output / "operations-mobile.png"))
         screenshots["operations-mobile.png"] = {"width": 390, "height": 1000, "view": "sources"}
         require("browser_has_no_http_writes", not writes)
