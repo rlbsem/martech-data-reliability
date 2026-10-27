@@ -4,7 +4,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse
 from urllib.request import HTTPRedirectHandler, ProxyHandler, Request, build_opener
 
-from marketing_reliability.contracts import day, digest, strict_json
+from marketing_reliability.contracts import canonical, day, digest, strict_json
 
 from .common import LIMIT, OWNERS
 from .source import receipt
@@ -132,12 +132,14 @@ class Client:
             body = strict_json(raw)
         except (ValueError, UnicodeError):
             raise Unknown("ack_readback_invalid") from None
-        if status == 404 and body == {
+        absent = {
             "contract": 1,
             "absent_ack": entry["seq"],
             "service": self.config["service"],
-        }:
+        }
+        if status == 404 and canonical(body) == canonical(absent):
             return None
-        if status != 200 or body != receipt(self.config["service"], entry["seq"], entry["sha256"]):
+        expected = receipt(self.config["service"], entry["seq"], entry["sha256"])
+        if status != 200 or canonical(body) != canonical(expected):
             raise Unknown("ack_readback_not_exact")
         return body

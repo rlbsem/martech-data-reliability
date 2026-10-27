@@ -75,6 +75,13 @@ def verify_live(config):
     selected = next(c for c in body["candidates"] if c["run"]["id"] == active)
     assert not selected["raw_oracle"]["differences"] and not selected["raw_oracle"]["unresolved"]
     assert selected["run"]["evidence"]["table_sha256"] == selected["raw_oracle"]["table_sha256"]
+    revenue = {(r[0], r[1]): r[7] for r in selected["raw_oracle"]["expected"]}
+    opportunities = [
+        [r["day"], r["campaign"], r["opportunities"], revenue[r["day"], r["campaign"]]]
+        for r in selected["raw_oracle"]["crm_opportunity_grain"]
+    ]
+    sql_opportunities = [r[1:] for r in body["opportunity_day"] if r[0] == active]
+    assert opportunities == sql_opportunities, "opportunity_day_sql_grain_or_value_difference"
     receipts = 0
     for service, source in config["sources"].items():
         assert body["sources"][service]["status"] == "observed"
@@ -94,6 +101,8 @@ def verify_live(config):
         "differences": [],
         "source_row_accounting": selected["raw_oracle"]["row_dispositions"],
         "source_rows": selected["raw_oracle"]["accepted_rows"],
+        "reported_closed_won_opportunities": sum(r[2] for r in opportunities),
+        "opportunity_day_models_compared": len(opportunities),
         "totals": selected["raw_oracle"]["totals"],
         "read_only": True,
         "native_marketing_vendor_calls": 0,

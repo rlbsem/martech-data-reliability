@@ -15,7 +15,7 @@ from reliability_ops.common import OWNERS, sqlite
 from reliability_ops.controller import Operations
 from reliability_ops.demo import execute
 from reliability_ops.scenario import raw_fixture
-from reliability_ops.source import append, claim
+from reliability_ops.source import append, claim, receipt
 from reliability_ops.view import verify_live
 
 from conftest import console
@@ -28,6 +28,7 @@ def test_complete_native_http_process_recovery_and_independent_arithmetic(runtim
     assert check["totals"]["cost_cents"] == 41000
     assert check["totals"]["conversions"] == 6
     assert check["totals"]["revenue_cents"] == 115000
+    assert check["reported_closed_won_opportunities"] == 2
     assert check["read_only"] and check["independent_source_receipts"] >= 10
     # Ordinary repeated demonstration returns stored actual evidence, never repeats writes.
     assert (
@@ -179,6 +180,22 @@ def test_source_read_credential_cannot_commit_acknowledgment(runtime):
     with pytest.raises(HTTPError) as error:
         urlopen(req)
     assert error.value.code == 403
+
+
+@pytest.mark.parametrize("status", [200, 404])
+@pytest.mark.parametrize("sequence", [True, 1.0])
+def test_boolean_or_float_ack_identity_is_not_an_exact_receipt(status, sequence):
+    client = Client({"service": "website", "url": "http://localhost:1", "read_token": "test-only"})
+    entry = {"seq": 1, "sha256": "a" * 64}
+    body = (
+        receipt("website", 1, entry["sha256"])
+        if status == 200
+        else {"contract": 1, "absent_ack": 1, "service": "website"}
+    )
+    body["seq" if status == 200 else "absent_ack"] = sequence
+    client.request = lambda *_: (status, canonical(body).encode())
+    with pytest.raises(Unknown, match="not_exact"):
+        client.read_ack(entry)
 
 
 @pytest.mark.parametrize(
