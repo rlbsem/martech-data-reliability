@@ -53,6 +53,7 @@ def configure(root, urls=None, docker=False):
             raise ValueError("code_changed_requires_explicit_fresh_demo")
         return json.loads((root / "controller.json").read_bytes())
     configs, sources = {}, {}
+    reserved_ports = set()
     for service in OWNERS:
         folder = Path("/sources") / service if docker else root / "sources" / service
         folder.mkdir(parents=True, exist_ok=True)
@@ -65,9 +66,13 @@ def configure(root, urls=None, docker=False):
         initialize(config["db"])
         private(folder / "source.json", config)
         configs[service] = config
+        port = free_port() if not urls else None
+        while port in reserved_ports:
+            port = free_port()
+        reserved_ports.add(port)
         sources[service] = {
             "service": service,
-            "url": urls[service] if urls else f"http://127.0.0.1:{free_port()}",
+            "url": urls[service] if urls else f"http://127.0.0.1:{port}",
             "read_token": config["read_token"],
             "ack_token": config["ack_token"],
         }

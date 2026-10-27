@@ -116,6 +116,8 @@ def main():
             work / "original-repeat" / name
         ).read_bytes()
     crashes = original_crashes(work / "original-crashes", out / "original-recovery.json")
+    # Preserve the original report's relative recovery link in its fresh subdirectory.
+    shutil.copyfile(out / "original-recovery.json", out / "original-demo/recovery.json")
     command(
         [
             "-m",
