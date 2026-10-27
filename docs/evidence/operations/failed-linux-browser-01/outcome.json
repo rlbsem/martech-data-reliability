@@ -1,0 +1,51 @@
+{
+  "status": "failed",
+  "execution": "Actual Linux Compose browser acceptance",
+  "run_url": "https://github.com/rlbsem/martech-data-reliability/actions/runs/40525560069",
+  "reason": "The full currency value exceeded the narrow mobile metric card with Linux font metrics. Responsive numeric sizing corrected the actual UI; no accessibility rule was suppressed.",
+  "findings": [
+    {
+      "width": 390,
+      "view": "overview",
+      "rule": "color-contrast",
+      "target": [
+        ".metric:nth-child(3) > strong"
+      ]
+    },
+    {
+      "width": 390,
+      "view": "sources",
+      "rule": "color-contrast",
+      "target": [
+        ".metric:nth-child(3) > strong"
+      ]
+    },
+    {
+      "width": 390,
+      "view": "candidates",
+      "rule": "color-contrast",
+      "target": [
+        ".metric:nth-child(3) > strong"
+      ]
+    },
+    {
+      "width": 390,
+      "view": "lineage",
+      "rule": "color-contrast",
+      "target": [
+        ".metric:nth-child(3) > strong"
+      ]
+    },
+    {
+      "width": 390,
+      "view": "recovery",
+      "rule": "color-contrast",
+      "target": [
+        ".metric:nth-child(3) > strong"
+      ]
+    }
+  ],
+  "report_sha256": "276c5d56d6308b7e2f5f49a59331bd4e6d734e89fbc8181dc26fad0fbd232f1a",
+  "native_scenario_and_readback": "passed before browser assertion failure",
+  "project_teardown_and_independent_absence_check": "passed"
+}

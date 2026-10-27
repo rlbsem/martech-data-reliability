@@ -37,6 +37,8 @@ The workspace must be new. Ctrl+C stops the owned source and console processes. 
 
 These are supplied relationships, not causal attribution or independent proof that a CRM win occurred. Reported CRM value is not booked revenue or collected cash. No cash model exists. Each feed uses the original [closed field contracts](contracts.md), including explicit paid-media v1/v2 compatibility and USD integer cents. Unsupported v3 remains rejected until an explicitly linked supported delivery resolves it; nothing silently upgrades a schema.
 
+A repair link is a producer assertion resolving or withdrawing a failed delivery, not independent proof that two payloads mean the same thing. The original rejected bytes and their exclusion remain visible.
+
 Every service has its own SQLite database, read token, acknowledgment token and monotone delivery sequence. A service cannot supply another owner's admitted facts merely by changing an envelope's `source`. The controller retains an ownership rejection outside the warehouse rather than passing it into the original trusted-input API.
 
 ```mermaid
@@ -91,6 +93,8 @@ Five views inspect reporting assurance, actual source status and coverage, contr
 Only port 8602 is published, on loopback. Sources remain on the internal Compose network. The console also joins a host-accessible bridge and mounts warehouse data and its separate read configuration read-only; it receives no acknowledgment tokens or source database volumes. All application containers run as a non-root user with capabilities dropped and read-only roots. The trusted finite harness alone has source storage access for fault injection; there is no public fault endpoint.
 
 This is a serialized local controller with DuckDB's single-writer limit, not a distributed orchestrator. SQLite files are separate persistence boundaries on one host, not independent hardware or native SaaS. Local tokens and filesystem isolation are not production SSO, tenant RLS, TLS, an egress firewall or protection from the host administrator. A partial interruption of the fixture harness is not silently reset: use the explicit persisted ingestion/build recovery, or recreate only the disposable demo after reviewing its state.
+
+The legacy CLI remains a separate trusted file-ingestion path and does not enforce the new HTTP inventory fences. Source-driven publication uses the operating wrapper. This preserves the original contract rather than presenting the extension as isolation from hostile local code.
 
 ## Verification and evidence
 

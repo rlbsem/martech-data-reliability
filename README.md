@@ -69,6 +69,10 @@ An additive operating layer connects three separately persisted synthetic HTTP s
 
 The read-only **Data Reliability Operations Console** inspects source status, quarantine, candidate-versus-published values, exact raw lineage and recovery. Failed candidates preserve the last verified report. [Architecture, contracts and reproduction](docs/reliability-operations.md).
 
+![Actual Data Reliability Operations Console](docs/evidence/operations/run02/browser/operations-desktop.png)
+
+[Executed operating evidence, independent reconciliation and screenshots](docs/evidence/operations/README.md). The current capture records **68 original + 33 operating/contract tests**, 30 HTTP scenario assertions, 73 browser assertions and ten automated accessibility states. Scenario assertions also run inside a regression test; these counts are different checks, not independent test totals.
+
 ```bash
 docker compose up --build
 ```
