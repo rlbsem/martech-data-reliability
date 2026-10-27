@@ -4,3 +4,5 @@
 
 /* Native select intrinsic widths differ across Linux and Windows. */
 header>div,.scope{min-width:0}.scope select{width:100%;min-width:0;max-width:100%}
+
+@media(max-width:720px){.metric strong{font-size:22px}}
