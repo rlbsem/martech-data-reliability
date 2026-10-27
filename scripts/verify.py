@@ -1,5 +1,6 @@
 """One command executes tests, crashes, deterministic demo and source-bound evidence."""
 
+import argparse
 import importlib.metadata
 import json
 import platform
@@ -27,7 +28,9 @@ def main():
     before = fingerprint()
     work = ROOT / "work/verification" / uuid4().hex
     work.mkdir(parents=True)
-    evidence = ROOT / "docs/evidence"
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, default=ROOT / "work/original-verification")
+    evidence = parser.parse_args().output.resolve()
     evidence.mkdir(parents=True, exist_ok=True)
     installed = Path(marketing_reliability.__file__).parent
     source = ROOT / "src/marketing_reliability"
@@ -129,7 +132,7 @@ def main():
     record = json.loads((evidence / "verification.json").read_text())
     record["internal_markdown_links_checked"] = link_count
     save(evidence / "verification.json", record)
-    inventory()
+    inventory(evidence)
     print(
         f"VERIFIED: {totals['tests']} tests; {len(crashes)} process-death experiments; deterministic demo; wheel parity; {link_count} local links"
     )

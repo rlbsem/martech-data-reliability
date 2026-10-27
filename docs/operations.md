@@ -8,7 +8,7 @@ marketing-pipeline --state work/my-demo report
 marketing-pipeline --state work/my-demo lineage 6
 ```
 
-The demo prints the exact database location and writes the linked evidence. It asserts results, so a changed fixture or model that changes those results fails visibly. Verification creates fresh state automatically.
+The demo prints the exact database location and writes fresh evidence to `work/original-demo/`. It asserts results, so a changed fixture or model that changes those results fails visibly. Verification creates fresh state automatically and writes to `work/original-verification/`, preserving archived evidence. The [multi-source console](reliability-operations.md) has a separate reproducible entry point.
 
 ## Individual transitions
 
@@ -51,4 +51,4 @@ python scripts/verify.py
 python scripts/package.py --output ../Richard_Butts_MarTech_Data_Reliability_Finished.zip
 ```
 
-Packaging checks source and generated-evidence hashes against the last verification, regenerates its self-excluding manifest/tree, checks ZIP CRC and compares every archived file with the repository. Runtime databases, virtual environments, caches and build outputs are excluded. The adjacent ZIP SHA-256 covers the archive, while the manifest covers every delivered file except itself.
+Packaging checks source and fresh-evidence hashes against `work/original-verification/` (or `--verification-dir`), regenerates its current manifest/tree there, checks ZIP CRC and compares every archived file with the repository. Historical manifests remain unchanged. Runtime databases, virtual environments, caches and build outputs are excluded. The adjacent ZIP SHA-256 covers the archive; the fresh manifest records current public files separately from archived inventories.

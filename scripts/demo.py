@@ -146,7 +146,7 @@ See [row reconciliation](reconciliation.json), [publication gates and rebuilds](
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--state", type=Path, default=ROOT / "work" / f"demo-{uuid4().hex}")
-    parser.add_argument("--output", type=Path, default=ROOT / "docs/evidence")
+    parser.add_argument("--output", type=Path, default=ROOT / "work/original-demo")
     args = parser.parse_args()
     result = execute(args.state, args.output)
     print(

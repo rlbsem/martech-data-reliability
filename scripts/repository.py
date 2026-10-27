@@ -8,7 +8,18 @@ from urllib.parse import unquote
 from marketing_reliability.contracts import canonical, digest
 
 ROOT = Path(__file__).resolve().parents[1]
-EXCLUDED = {".git", ".venv", "work", "build", "dist", "__pycache__", ".pytest_cache", ".ruff_cache"}
+EXCLUDED = {
+    ".git",
+    ".venv",
+    ".local",
+    ".env",
+    "work",
+    "build",
+    "dist",
+    "__pycache__",
+    ".pytest_cache",
+    ".ruff_cache",
+}
 
 
 def files():
@@ -65,8 +76,9 @@ def links():
     return checked
 
 
-def inventory():
-    evidence = ROOT / "docs/evidence"
+def inventory(evidence=None):
+    evidence = evidence or ROOT / "work/original-verification"
+    evidence.mkdir(parents=True, exist_ok=True)
     tree = evidence / "repository-tree.txt"
     manifest = evidence / "package-manifest.json"
     names = sorted(
@@ -84,6 +96,11 @@ def inventory():
     }
     save(
         manifest,
-        {"format": 1, "excluded_self": "docs/evidence/package-manifest.json", "files": entries},
+        {
+            "format": 1,
+            "scope": "Current public repository files; historical manifests remain archived",
+            "excluded_self": manifest.relative_to(ROOT).as_posix(),
+            "files": entries,
+        },
     )
     return entries

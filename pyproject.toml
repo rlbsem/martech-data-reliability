@@ -17,6 +17,7 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 marketing_reliability = ["sql/*.sql"]
+reliability_ops = ["*.sql", "web/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -25,3 +26,4 @@ addopts = "-ra"
 
 [tool.ruff]
 line-length = 100
+extend-exclude = ["work", ".local"]

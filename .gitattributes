@@ -1,2 +1,4 @@
 * text=auto eol=lf
 *.png binary
+# Preserve executed artifacts byte for byte across platforms.
+docs/evidence/operations/** -text whitespace=cr-at-eol

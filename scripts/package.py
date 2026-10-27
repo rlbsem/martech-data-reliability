@@ -11,17 +11,19 @@ from repository import ROOT, files, fingerprint, inventory, links
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=str, required=True)
+    parser.add_argument("--verification-dir", type=str, default="work/original-verification")
     args = parser.parse_args()
-    verification = json.loads((ROOT / "docs/evidence/verification.json").read_text())
+    verification_dir = (ROOT / args.verification_dir).resolve()
+    verification = json.loads((verification_dir / "verification.json").read_text())
     assert verification["source_fingerprint"] == fingerprint(), (
         "run verification after source changes"
     )
     for name, checksum in verification["generated_evidence"].items():
-        assert digest((ROOT / "docs/evidence" / name).read_bytes()) == checksum, (
+        assert digest((verification_dir / name).read_bytes()) == checksum, (
             f"changed evidence: {name}"
         )
     links()
-    inventory()
+    inventory(verification_dir)
     from pathlib import Path
 
     output = Path(args.output).resolve()
