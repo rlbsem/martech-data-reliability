@@ -49,12 +49,13 @@ def single_writer(path):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     f = path.open("a+b")
-    f.seek(0)
-    if not f.read(1):
-        f.write(b"0")
-        f.flush()
-    f.seek(0)
     try:
+        # Windows mandatory byte locks can refuse this read before locking itself.
+        f.seek(0)
+        if not f.read(1):
+            f.write(b"0")
+            f.flush()
+        f.seek(0)
         if os.name == "nt":
             import msvcrt
 
