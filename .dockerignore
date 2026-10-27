@@ -1,0 +1,12 @@
+.git
+.venv
+work
+.local
+.env
+build
+dist
+__pycache__
+*.pyc
+docs
+tests
+operations_tests

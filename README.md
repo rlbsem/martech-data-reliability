@@ -63,6 +63,22 @@ For the related problem of defining and reconciling commercial measures, see [Re
 
 The [engineering demonstration walkthrough](docs/interview-walkthrough.md) traces those artifacts from admission to publication. [Architecture scope and related systems](docs/portfolio-positioning.md) distinguish this ingestion and analytics boundary from the other implementations.
 
+## Multi-source Data Reliability Operations
+
+An additive operating layer connects three separately persisted synthetic HTTP services to the existing warehouse. Advertising owns campaign references and spend; website events and CRM opportunity outcomes retain their own grains. Durable checkpoints, independent source acknowledgments and explicit coverage assertions distinguish successful delivery from reportable data.
+
+The read-only **Data Reliability Operations Console** inspects source status, quarantine, candidate-versus-published values, exact raw lineage and recovery. Failed candidates preserve the last verified report. [Architecture, contracts and reproduction](docs/reliability-operations.md).
+
+![Actual Data Reliability Operations Console](docs/evidence/operations/run02/browser/operations-desktop.png)
+
+[Executed operating evidence, independent reconciliation and screenshots](docs/evidence/operations/README.md). The current capture records **68 original + 33 operating/contract tests**, 30 HTTP scenario assertions, 73 browser assertions and ten automated accessibility states. Scenario assertions also run inside a regression test; these counts are different checks, not independent test totals.
+
+```bash
+docker compose up --build
+```
+
+Open [the local console](http://127.0.0.1:8602/). No native marketing-platform connector, cloud account or paid service is involved. The original Python-only workflow below remains available.
+
 ## Reproduce
 
 Use **Python 3.12**, from the extracted repository directory:
@@ -79,7 +95,7 @@ python -m pip install --no-deps --no-build-isolation .
 python scripts/verify.py
 ```
 
-Verification runs the full test suite, actual process crashes, two byte-compared demonstrations, dependency and style checks, wheel-content checks and internal Markdown links. It regenerates evidence and the package manifest. Every run uses a new ignored working directory and does not reset previous databases. For the story alone, run `python scripts/demo.py`. [Operations and individual commands](docs/operations.md).
+Verification runs the original test suite, actual process crashes, two byte-compared demonstrations, dependency and style checks, wheel-content checks and internal Markdown links. Fresh evidence and the current package manifest go to `work/original-verification/`; historical evidence remains unchanged. Every run uses a new ignored working directory and does not reset previous databases. For the story alone, run `python scripts/demo.py`. [Operations and individual commands](docs/operations.md).
 
 ## Important boundaries
 

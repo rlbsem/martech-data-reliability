@@ -1,5 +1,8 @@
 .venv/
 work/
+.local/
+.env
+*.pyc
 build/
 dist/
 *.egg-info/

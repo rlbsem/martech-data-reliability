@@ -20,4 +20,4 @@ jobs:
         if: always()
         with:
           name: verification-${{ matrix.os }}
-          path: docs/evidence/
+          path: work/original-verification/

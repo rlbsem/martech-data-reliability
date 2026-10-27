@@ -1,0 +1,100 @@
+{
+  "experiments": [
+    {
+      "point": "after_landing",
+      "process_exit_code": 86,
+      "publication_atomicity_passed": true,
+      "versions_before": 14,
+      "versions_after_crash": 14,
+      "versions_after_retry": 19,
+      "active_before": 1,
+      "active_after_crash": 1,
+      "active_after_retry": 1,
+      "recovery_passed": true
+    },
+    {
+      "point": "during_ingest",
+      "process_exit_code": 86,
+      "publication_atomicity_passed": true,
+      "versions_before": 14,
+      "versions_after_crash": 14,
+      "versions_after_retry": 19,
+      "active_before": 1,
+      "active_after_crash": 1,
+      "active_after_retry": 1,
+      "recovery_passed": true
+    },
+    {
+      "point": "before_ingest_commit",
+      "process_exit_code": 86,
+      "publication_atomicity_passed": true,
+      "versions_before": 14,
+      "versions_after_crash": 14,
+      "versions_after_retry": 19,
+      "active_before": 1,
+      "active_after_crash": 1,
+      "active_after_retry": 1,
+      "recovery_passed": true
+    },
+    {
+      "point": "after_ingest_commit",
+      "process_exit_code": 86,
+      "publication_atomicity_passed": true,
+      "versions_before": 14,
+      "versions_after_crash": 19,
+      "versions_after_retry": 19,
+      "active_before": 1,
+      "active_after_crash": 1,
+      "active_after_retry": 1,
+      "recovery_passed": true
+    },
+    {
+      "point": "during_build",
+      "process_exit_code": 86,
+      "publication_atomicity_passed": true,
+      "versions_before": 14,
+      "versions_after_crash": 15,
+      "versions_after_retry": 15,
+      "active_before": 1,
+      "active_after_crash": 1,
+      "active_after_retry": 2,
+      "recovery_passed": true
+    },
+    {
+      "point": "after_build_commit",
+      "process_exit_code": 86,
+      "publication_atomicity_passed": true,
+      "versions_before": 14,
+      "versions_after_crash": 15,
+      "versions_after_retry": 15,
+      "active_before": 1,
+      "active_after_crash": 1,
+      "active_after_retry": 2,
+      "recovery_passed": true
+    },
+    {
+      "point": "before_publish_commit",
+      "process_exit_code": 86,
+      "publication_atomicity_passed": true,
+      "versions_before": 14,
+      "versions_after_crash": 15,
+      "versions_after_retry": 15,
+      "active_before": 1,
+      "active_after_crash": 1,
+      "active_after_retry": 2,
+      "recovery_passed": true
+    },
+    {
+      "point": "after_publish_commit",
+      "process_exit_code": 86,
+      "publication_atomicity_passed": true,
+      "versions_before": 14,
+      "versions_after_crash": 15,
+      "versions_after_retry": 15,
+      "active_before": 1,
+      "active_after_crash": 2,
+      "active_after_retry": 2,
+      "recovery_passed": true
+    }
+  ]
+}

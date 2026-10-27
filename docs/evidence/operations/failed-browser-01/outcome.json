@@ -1,0 +1,33 @@
+{
+  "status": "failed",
+  "reason": "Recovery-table text remained partly clipped on mobile; the strict visibility/contrast follow-up rejected this capture. Full messages were moved to accessible expandable run details, preserving their content.",
+  "automated_violation_count": 0,
+  "unresolved_findings": [
+    {
+      "width": 390,
+      "view": "recovery",
+      "rule": "color-contrast",
+      "target": [
+        "tr:nth-child(3) > td:nth-child(5)"
+      ]
+    },
+    {
+      "width": 390,
+      "view": "recovery",
+      "rule": "color-contrast",
+      "target": [
+        "tr:nth-child(4) > td:nth-child(5)"
+      ]
+    },
+    {
+      "width": 390,
+      "view": "recovery",
+      "rule": "color-contrast",
+      "target": [
+        "tr:nth-child(5) > td:nth-child(5)"
+      ]
+    }
+  ],
+  "raw_report_sha256": "dcdd96aaff86404cdd9217deac4aabe4be6add5c6a4c16db69bdd26ff9d05396",
+  "note": "This is an archived failed draft UI capture, not the current acceptance record."
+}

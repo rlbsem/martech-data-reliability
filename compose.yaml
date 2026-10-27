@@ -1,0 +1,69 @@
+name: reliability-operations
+x-runtime: &runtime
+  build: .
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  pids_limit: 128
+  mem_limit: 512m
+  tmpfs: ['/tmp:size=128m,mode=1777']
+  networks: [backend]
+services:
+  initialize:
+    <<: *runtime
+    command: [python, -m, reliability_ops.compose_setup, initialize]
+    volumes: [control:/control, console-config:/console-config, advertising-data:/sources/advertising, website-data:/sources/website, crm-data:/sources/crm]
+  advertising:
+    <<: *runtime
+    depends_on: {initialize: {condition: service_completed_successfully}}
+    command: [python, -m, reliability_ops.service, source, --config, /sources/advertising/source.json, --host, 0.0.0.0, --port, '8340']
+    volumes: [advertising-data:/sources/advertising]
+    healthcheck: &health
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8340/health',timeout=2)"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  website:
+    <<: *runtime
+    depends_on: {initialize: {condition: service_completed_successfully}}
+    command: [python, -m, reliability_ops.service, source, --config, /sources/website/source.json, --host, 0.0.0.0, --port, '8340']
+    volumes: [website-data:/sources/website]
+    healthcheck: *health
+  crm:
+    <<: *runtime
+    depends_on: {initialize: {condition: service_completed_successfully}}
+    command: [python, -m, reliability_ops.service, source, --config, /sources/crm/source.json, --host, 0.0.0.0, --port, '8340']
+    volumes: [crm-data:/sources/crm]
+    healthcheck: *health
+  demo:
+    <<: *runtime
+    depends_on:
+      advertising: {condition: service_healthy}
+      website: {condition: service_healthy}
+      crm: {condition: service_healthy}
+    command: [python, -m, reliability_ops.compose_setup, demo]
+    # Only the finite trusted acceptance harness receives source fault-injection storage.
+    volumes: [control:/control, state:/state, advertising-data:/sources/advertising, website-data:/sources/website, crm-data:/sources/crm]
+  console:
+    <<: *runtime
+    depends_on: {demo: {condition: service_completed_successfully}}
+    networks: [backend, console_access]
+    ports: ['127.0.0.1:8602:8602']
+    volumes: ['state:/state:ro', 'console-config:/console-config:ro']
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8602/health',timeout=2)"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+networks:
+  backend: {internal: true}
+  console_access:
+    driver: bridge
+    driver_opts: {com.docker.network.bridge.host_binding_ipv4: '127.0.0.1'}
+volumes:
+  control:
+  console-config:
+  state:
+  advertising-data:
+  website-data:
+  crm-data:
