@@ -39,6 +39,10 @@ jobs:
           docker compose -f compose.yaml -f deploy/compose.acceptance.yaml config > work/container-evidence/resolved-compose.yaml
           docker compose -f compose.yaml -f deploy/compose.acceptance.yaml up --build -d --wait --wait-timeout 240
           docker image inspect "${COMPOSE_PROJECT_NAME}-console" > work/container-evidence/image.json
+      - name: Audit the pinned application dependency against current advisories
+        run: |
+          python -m pip install pip-audit==2.9.0
+          python -m pip_audit --no-deps --disable-pip -r requirements-runtime.lock --format json --output work/container-evidence/runtime-audit.json
       - name: Verify read-only mount and private network boundaries
         run: |
           docker compose exec -T console python -c "import os; assert os.getuid()==10001; assert not os.access('/state',os.W_OK); assert not os.path.exists('/control/controller.json')"

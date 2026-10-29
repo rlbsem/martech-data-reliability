@@ -124,7 +124,24 @@ def run(work, out):
                         "async()=>{const r=await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}}); return {violations:r.violations,incomplete:r.incomplete,passes:r.passes.length}}"
                     )
                     require(f"{condition}:{width}:accessibility", result["violations"], [])
-                    # New view has no scrollable tables; unresolved audits are retained, never called passes.
+                    followups = []
+                    for issue in result["incomplete"]:
+                        for node in issue["nodes"]:
+                            target = page.locator(node["target"][0])
+                            target.evaluate("e=>e.scrollIntoView({block:'center',inline:'center'})")
+                            detail = target.evaluate(
+                                "async(e,rule)=>{const r=await axe.run(e,{runOnly:{type:'rule',values:[rule]}});return {violations:r.violations,incomplete:r.incomplete,passes:r.passes.length}}",
+                                issue["id"],
+                            )
+                            assert (
+                                not detail["violations"]
+                                and not detail["incomplete"]
+                                and detail["passes"]
+                            )
+                            followups.append(
+                                {"rule": issue["id"], "target": node["target"], **detail}
+                            )
+                    result["visibility_followups"] = followups
                     observations.append({"condition": condition, "width": width, **result})
                     name = f"operations-{condition}-{width}.png"
                     page.screenshot(path=str(out / name), full_page=True)

@@ -163,3 +163,33 @@ def test_service_startup_rejects_write_credentials_in_console_and_shared_source_
     source["ack_token"] = source["read_token"]
     with pytest.raises(ValueError, match="distinct_strong"):
         validate_config(source, "source")
+
+
+def test_restore_rejects_different_implementation_before_creating_target(baseline):
+    config = readonly(baseline)
+    archive = baseline.root / "backup"
+    backup(config, archive)
+    manifest = archive / "manifest.json"
+    body = json.loads(manifest.read_bytes())
+    body["implementation_sha256"] = "0" * 64
+    manifest.write_text(json.dumps(body))
+    target = baseline.root / "different-version"
+    with pytest.raises(ValueError, match="matching_implementation"):
+        restore(config, archive, target)
+    assert not target.exists()
+
+
+def test_new_independent_delivery_and_receipt_prevent_old_journal_admission(baseline):
+    from reliability_ops.controller import Operations
+    from reliability_ops.scenario import raw_fixture
+    from reliability_ops.source import append
+
+    config = readonly(baseline)
+    archive = baseline.root / "backup"
+    backup(config, archive)
+    append(baseline.source_configs["website"], "web", raw_fixture(3))
+    claim(baseline.source_configs["website"], "web", 2)
+    with Operations(baseline.config) as ops:
+        assert ops.sync("website") == [2]
+    with pytest.raises(ValueError, match="independent_sources"):
+        restore(config, archive, baseline.root / "remote-ahead")

@@ -43,6 +43,11 @@ def check():
     assert required <= {c["check"] for c in report["checks"]}
     assert len(report["screenshots"]) == 6 and len(report["accessibility"]) == 6
     assert all(not scan["violations"] for scan in report["accessibility"])
+    assert all(
+        not f["violations"] and not f["incomplete"] and f["passes"]
+        for scan in report["accessibility"]
+        for f in scan["visibility_followups"]
+    )
     for name, sha in report["screenshots"].items():
         assert hashes[name] == sha
     for p in out.glob("*.json"):

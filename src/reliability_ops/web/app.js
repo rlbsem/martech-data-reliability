@@ -1,7 +1,7 @@
 const $=s=>document.querySelector(s), el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=String(text);if(cls)n.className=cls;return n;};
 let data,view="overview",selected,loadVersion=0;
 const money=c=>new Intl.NumberFormat("en-US",{style:"currency",currency:data?.currency||"USD"}).format(c/100);
-function raw(x){const p=el("pre",JSON.stringify(x,null,2));p.tabIndex=0;p.setAttribute("aria-label","Structured engineering evidence");return p;}
+function raw(x){const p=el("pre",JSON.stringify(x,null,2));p.tabIndex=0;p.setAttribute("role","region");p.setAttribute("aria-label","Structured engineering evidence");return p;}
 function details(parent,title,value){const d=el("details"),s=el("summary",title);d.append(s,raw(value));parent.append(d);}
 function card(title,description){const c=el("section",undefined,"card");c.append(el("h2",title),el("p",description,"lead"));return c;}
 function table(headers,rows,label){const wrap=el("div",undefined,"table"),t=el("table"),cap=el("caption",label,"accessible-caption");if(headers.length>=7)wrap.classList.add("wide");wrap.tabIndex=0;wrap.setAttribute("role","region");wrap.setAttribute("aria-label",label);wrap.append(el("p",label,"table-caption"),t);t.append(cap);const head=el("thead"),hr=el("tr");headers.forEach(h=>{const n=el("th",h);n.scope="col";hr.append(n);});head.append(hr);t.append(head);const b=el("tbody");for(const row of rows){const r=el("tr");for(const v of row){const td=el("td");td.append(v instanceof Node?v:document.createTextNode(String(v??"—")));r.append(td);}b.append(r);}t.append(b);return wrap;}
