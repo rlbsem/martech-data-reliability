@@ -1,0 +1,244 @@
+{
+  "accepted_delivery_rows": 30,
+  "active_run": 6,
+  "active_run_validation": {
+    "blockers": [],
+    "coverage_lag_days": {
+      "campaigns": 0,
+      "crm": 0,
+      "paid_media": 0,
+      "web": 0
+    },
+    "independent_full_match": true,
+    "row_count": 6,
+    "table_sha256": "5e0926c7ab93679394b4bef8c23c5869d2e15bf5b709b7c1180887198871fded",
+    "totals": {
+      "clicks": 400,
+      "conversions": 6,
+      "cost_cents": 41000,
+      "impressions": 4000,
+      "revenue_cents": 115000
+    },
+    "unresolved": []
+  },
+  "admitted_versions": 26,
+  "current_live_records": 17,
+  "current_tombstones": 2,
+  "deliveries": [
+    [
+      "26afa248896f2f6c3086ff7142021592c3cb803eb94f1513d342c18862afaf4d",
+      "crm",
+      "07-crm-corrections",
+      "accepted",
+      null,
+      "2026-09-06",
+      2
+    ],
+    [
+      "8e93c0246262abb498a78b04cc64f74db85f6ccc1302e140ccdfc3514885ba6d",
+      "campaigns",
+      "01-campaigns",
+      "accepted",
+      null,
+      "2026-09-03",
+      2
+    ],
+    [
+      "a3efba38344a1d44a895a7030f77ac3c69aebb232b2c0d3051540d50e7022d58",
+      "paid_media",
+      "02-paid",
+      "accepted",
+      null,
+      "2026-09-03",
+      4
+    ],
+    [
+      "abc9de1ba9049d9cf0832ca41a0a85ed7fa6695c22d3dff7450d29ad37e2c96b",
+      "web",
+      "03-web",
+      "accepted",
+      null,
+      "2026-09-03",
+      7
+    ],
+    [
+      "b338da6303f00a182d5de039d1269d82d0714051361c850d67b460a093959552",
+      "paid_media",
+      "06-paid-v2",
+      "accepted",
+      null,
+      "2026-09-06",
+      3
+    ],
+    [
+      "c00cd8e4527af5a9c799986c64dc7af4b35551344372d7086df7a7ea3cb22f5d",
+      "campaigns",
+      "08-campaign-repair",
+      "accepted",
+      null,
+      "2026-09-06",
+      2
+    ],
+    [
+      "c4e34bdcf699c99015293d95abbbdebc13618af4fb65b348b82cffc1d99c9712",
+      "crm",
+      "04-crm",
+      "accepted",
+      null,
+      "2026-09-03",
+      3
+    ],
+    [
+      "c7d57c12d4e07aa679aaeffdb185a245a48e4a73fa19e3c00f37df7fef43e9b2",
+      "web",
+      "05-web-corrections",
+      "accepted",
+      null,
+      "2026-09-06",
+      6
+    ],
+    [
+      "d022686318b3845a21829626dd373e21e4a2ae57b9457ea5a13f9327e08da340",
+      null,
+      null,
+      "rejected",
+      "unsupported schema version; delivery requires upstream repair",
+      null,
+      0
+    ],
+    [
+      "ded08b918cede25322c74a3689a708277fdd3d08b9053061e4d1010ebde5a750",
+      "paid_media",
+      "09-paid-out-of-order",
+      "accepted",
+      null,
+      "2026-09-06",
+      1
+    ]
+  ],
+  "dirty_dates": [],
+  "landing_objects": [
+    {
+      "receipted": true,
+      "sha256": "26afa248896f2f6c3086ff7142021592c3cb803eb94f1513d342c18862afaf4d"
+    },
+    {
+      "receipted": true,
+      "sha256": "8e93c0246262abb498a78b04cc64f74db85f6ccc1302e140ccdfc3514885ba6d"
+    },
+    {
+      "receipted": true,
+      "sha256": "a3efba38344a1d44a895a7030f77ac3c69aebb232b2c0d3051540d50e7022d58"
+    },
+    {
+      "receipted": true,
+      "sha256": "abc9de1ba9049d9cf0832ca41a0a85ed7fa6695c22d3dff7450d29ad37e2c96b"
+    },
+    {
+      "receipted": true,
+      "sha256": "b338da6303f00a182d5de039d1269d82d0714051361c850d67b460a093959552"
+    },
+    {
+      "receipted": true,
+      "sha256": "c00cd8e4527af5a9c799986c64dc7af4b35551344372d7086df7a7ea3cb22f5d"
+    },
+    {
+      "receipted": true,
+      "sha256": "c4e34bdcf699c99015293d95abbbdebc13618af4fb65b348b82cffc1d99c9712"
+    },
+    {
+      "receipted": true,
+      "sha256": "c7d57c12d4e07aa679aaeffdb185a245a48e4a73fa19e3c00f37df7fef43e9b2"
+    },
+    {
+      "receipted": true,
+      "sha256": "d022686318b3845a21829626dd373e21e4a2ae57b9457ea5a13f9327e08da340"
+    },
+    {
+      "receipted": true,
+      "sha256": "ded08b918cede25322c74a3689a708277fdd3d08b9053061e4d1010ebde5a750"
+    }
+  ],
+  "published": [
+    [
+      "2026-09-01",
+      "search",
+      "Paid Search",
+      11000,
+      1000,
+      100,
+      0,
+      50000
+    ],
+    [
+      "2026-09-01",
+      "social",
+      "Social",
+      6000,
+      600,
+      60,
+      3,
+      0
+    ],
+    [
+      "2026-09-02",
+      "search",
+      "Paid Search",
+      12000,
+      1200,
+      120,
+      2,
+      0
+    ],
+    [
+      "2026-09-03",
+      "partner",
+      "Partner",
+      4000,
+      400,
+      40,
+      1,
+      0
+    ],
+    [
+      "2026-09-03",
+      "search",
+      "Paid Search",
+      0,
+      0,
+      0,
+      0,
+      65000
+    ],
+    [
+      "2026-09-03",
+      "social",
+      "Social",
+      8000,
+      800,
+      80,
+      0,
+      0
+    ]
+  ],
+  "quarantine": [
+    [
+      "abc9de1ba9049d9cf0832ca41a0a85ed7fa6695c22d3dff7450d29ad37e2c96b",
+      7,
+      "integer required in [0, 10^12]",
+      "{\"campaign_id\":\"social\",\"conversions\":\"1\",\"day\":\"2026-09-01\",\"id\":\"bad\",\"op\":\"upsert\",\"revision\":1}"
+    ],
+    [
+      "b338da6303f00a182d5de039d1269d82d0714051361c850d67b460a093959552",
+      3,
+      "only USD is supported",
+      "{\"campaign_id\":\"partner\",\"clicks\":7,\"cost_cents\":700,\"currency\":\"EUR\",\"day\":\"2026-09-03\",\"id\":\"eur\",\"impressions\":70,\"op\":\"upsert\",\"revision\":1}"
+    ]
+  ],
+  "row_dispositions": {
+    "admitted": 26,
+    "duplicate": 2,
+    "quarantined": 2
+  },
+  "superseded_versions": 7
+}
