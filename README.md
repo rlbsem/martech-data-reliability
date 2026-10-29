@@ -93,6 +93,8 @@ The isolated application now distinguishes a responding process from an independ
 
 Current local verification executes **68 original + 48 operating/contract tests**, eight original process-death experiments, the existing 30-assertion HTTP scenario and 73 browser assertions, plus a separate operational failure experiment with six genuine readiness screenshots. Linux container acceptance is a separate GitHub Actions lane. These are synthetic application checks; no publicly hosted dynamic service or production acceptance is claimed.
 
+**Executed Linux container acceptance:** [recorded deployment, backup/restore, source outage, restart and zero-residual teardown](docs/evidence/delivery/container-run01/verification.json). Six inspected containers used the same verified image, non-root identities, read-only root filesystems and bounded CPU/memory/process/log settings. Only the console published a loopback port.
+
 ## Reproduce
 
 Use **Python 3.12**, from the extracted repository directory:

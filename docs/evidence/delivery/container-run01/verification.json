@@ -1,0 +1,136 @@
+{
+  "status": "passed",
+  "execution": "actual_GitHub_Actions_Linux_Docker_Compose",
+  "repository": "rlbsem/martech-data-reliability",
+  "workflow_run_id": 40800672690,
+  "job_id": 123207764706,
+  "head_sha": "2f1728e78972f77e0f097cda6659471b0eb09784",
+  "workflow_url": "https://github.com/rlbsem/martech-data-reliability/actions/runs/40800672690",
+  "artifact_id": 12866176075,
+  "github_reported_archive_sha256": "ea1515b49f92119f13ef67898e2b790dd4baf2f3452304444b51249c8b1cf006",
+  "image_id": "sha256:a26c2f9f02d8ee792ff66fb8722c19dc3848d9d766a74a84290f17aeee9cc3aa",
+  "platform": "linux/amd64",
+  "containers": [
+    {
+      "service": "advertising",
+      "user": "10001:10001",
+      "read_only_root": true,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "memory_bytes": 536870912,
+      "process_limit": 128,
+      "cpu_limit": 1.0,
+      "host_port_published": false,
+      "host_port_scope": "none"
+    },
+    {
+      "service": "console",
+      "user": "10001:10001",
+      "read_only_root": true,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "memory_bytes": 536870912,
+      "process_limit": 128,
+      "cpu_limit": 1.0,
+      "host_port_published": true,
+      "host_port_scope": "loopback_only"
+    },
+    {
+      "service": "crm",
+      "user": "10001:10001",
+      "read_only_root": true,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "memory_bytes": 536870912,
+      "process_limit": 128,
+      "cpu_limit": 1.0,
+      "host_port_published": false,
+      "host_port_scope": "none"
+    },
+    {
+      "service": "demo",
+      "user": "10001:10001",
+      "read_only_root": true,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "memory_bytes": 536870912,
+      "process_limit": 128,
+      "cpu_limit": 1.0,
+      "host_port_published": false,
+      "host_port_scope": "none"
+    },
+    {
+      "service": "initialize",
+      "user": "10001:10001",
+      "read_only_root": true,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "memory_bytes": 536870912,
+      "process_limit": 128,
+      "cpu_limit": 1.0,
+      "host_port_published": false,
+      "host_port_scope": "none"
+    },
+    {
+      "service": "website",
+      "user": "10001:10001",
+      "read_only_root": true,
+      "all_capabilities_dropped": true,
+      "no_new_privileges": true,
+      "memory_bytes": 536870912,
+      "process_limit": 128,
+      "cpu_limit": 1.0,
+      "host_port_published": false,
+      "host_port_scope": "none"
+    }
+  ],
+  "maintenance_observations": [
+    {
+      "observed_at": "2026-10-29T01:29:44.8392494Z",
+      "result": {
+        "status": "passed",
+        "files": 25,
+        "scope": "publication_state_only",
+        "credentials_included": false
+      }
+    },
+    {
+      "observed_at": "2026-10-29T01:29:46.7597811Z",
+      "result": {
+        "status": "passed",
+        "active_run": 13,
+        "totals": {
+          "cost_cents": 41000,
+          "impressions": 4000,
+          "clicks": 400,
+          "conversions": 6,
+          "revenue_cents": 115000
+        },
+        "source_writes": 0,
+        "automatic_controller_resume": false
+      }
+    }
+  ],
+  "source_outage_readiness": "not_ready",
+  "restarted_publication_matches_initial": true,
+  "independent_project_teardown": {
+    "project_containers": 0,
+    "project_volumes": 0,
+    "project_networks": 0
+  },
+  "synthetic": true,
+  "cloud_resources": 0,
+  "public_hosted_acceptance": "not_executed",
+  "extracted_upstream_file_sha256": {
+    "containers.json": "a9082375140a7af6280b22a6a59fa5213215e5236db648be3eac682b940aca02",
+    "image.json": "fbd70e81ea9b8fdeae97aa78a8fc40b16105d8567e8bde0d6eedf96f0a3254d2",
+    "initial-readiness.json": "d843e1b20b8702b9877d0c2720b0bea27ff0e5a3eeed877b587d4f24cd7bc1b7",
+    "recovered-readiness.json": "43a67816060097af3866ec0462b159a836012250317396323ce5f1a1457d98d2",
+    "resolved-compose.yaml": "4aa45ec461f206de78c1374eaf89a97a79ae9d9df0198715f29f04c429e3605c",
+    "runtime-audit.json": "33e976c61ced59bff00ceea101471af7552e2e930f2ea66c90f2ecd4e995f81e",
+    "service.log": "a546dee998fd817cc49a4ef61b6b027ce8fcecc24e7de1d48cb3be02f18a7c9e",
+    "services.json": "44359fba8353f4e9cdce2240db2e45a42c26ca170b76697cdda09bbd502cdd6c",
+    "source-outage.json": "e977d5b1752d70174d9b4569b70a56855fd23cf15c738865854d3eb046231abb",
+    "teardown.json": "09747b5c55fc39553bdae866204adc66a7268cec65edb87b09a69ec7fd0bf762"
+  }
+}
