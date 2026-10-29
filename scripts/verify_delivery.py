@@ -187,8 +187,8 @@ def run(work, out):
                 "restore_not_ready_against_independent_sources",
             )
         log_rows = []
-    for _, stream in runtime.children:
-        for line in Path(stream.name).read_text(encoding="utf-8").splitlines():
+    for path in sorted({Path(stream.name) for _, stream in runtime.children}):
+        for line in path.read_text(encoding="utf-8").splitlines():
             row = json.loads(line)
             assert set(row) <= {
                 "at",
@@ -200,6 +200,8 @@ def run(work, out):
                 "duration_ms",
             }
             log_rows.append(row)
+    ids = [r["request_id"] for r in log_rows if "request_id" in r]
+    require("request_ids_unique_across_restart", len(ids), len(set(ids)))
     require("owned_processes_stopped", all(c.poll() is not None for c, _ in runtime.children), True)
     require("source_unchanged_during_acceptance", sources(), before)
     revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
