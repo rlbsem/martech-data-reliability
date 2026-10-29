@@ -30,17 +30,26 @@ ROOT = Path(__file__).resolve().parents[1]
 def sources():
     paths = [
         p
-        for folder in ["src", "scripts", "tests", "operations_tests", "fixtures", ".github"]
+        for folder in [
+            "src",
+            "scripts",
+            "tests",
+            "operations_tests",
+            "fixtures",
+            ".github",
+            "deploy",
+        ]
         for p in (ROOT / folder).rglob("*")
         if p.is_file()
         and "__pycache__" not in p.parts
-        and p.suffix in {".py", ".sql", ".html", ".js", ".css", ".json", ".yml"}
+        and p.suffix in {".py", ".sql", ".html", ".js", ".css", ".json", ".yml", ".yaml"}
     ]
     paths += [
         ROOT / n
         for n in [
             "requirements.lock",
             "requirements-operations.lock",
+            "requirements-runtime.lock",
             "pyproject.toml",
             "Dockerfile",
             "compose.yaml",

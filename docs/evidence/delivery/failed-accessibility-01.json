@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "check": "verified_readiness",
+      "observed": [
+        200,
+        "ready"
+      ],
+      "expected": [
+        200,
+        "ready"
+      ],
+      "passed": true
+    },
+    {
+      "check": "independent_source_economics",
+      "observed": {
+        "cost_cents": 41000,
+        "impressions": 4000,
+        "clicks": 400,
+        "conversions": 6,
+        "revenue_cents": 115000
+      },
+      "expected": {
+        "cost_cents": 41000,
+        "impressions": 4000,
+        "clicks": 400,
+        "conversions": 6,
+        "revenue_cents": 115000
+      },
+      "passed": true
+    },
+    {
+      "check": "read_only_POST",
+      "observed": 405,
+      "expected": 405,
+      "passed": true
+    },
+    {
+      "check": "read_only_PATCH",
+      "observed": 405,
+      "expected": 405,
+      "passed": true
+    },
+    {
+      "check": "read_only_PUT",
+      "observed": 405,
+      "expected": 405,
+      "passed": true
+    },
+    {
+      "check": "read_only_DELETE",
+      "observed": 405,
+      "expected": 405,
+      "passed": true
+    },
+    {
+      "check": "backup_verified",
+      "observed": "passed",
+      "expected": "passed",
+      "passed": true
+    },
+    {
+      "check": "restore_verified",
+      "observed": "passed",
+      "expected": "passed",
+      "passed": true
+    },
+    {
+      "check": "ready:1440:no_overflow",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    }
+  ],
+  "current_check": "ready:1440:accessibility",
+  "actual": [
+    {
+      "id": "scrollable-region-focusable",
+      "impact": "serious",
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag211",
+        "wcag213",
+        "TTv5",
+        "TT4.a",
+        "EN-301-549",
+        "EN-9.2.1.1",
+        "EN-9.2.1.3"
+      ],
+      "description": "Ensure elements that have scrollable content are accessible by keyboard",
+      "help": "Scrollable region must have keyboard access",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/scrollable-region-focusable?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element should have focusable content"
+            },
+            {
+              "id": "focusable-element",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element should be focusable"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<pre>",
+          "target": [
+            "pre"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+        }
+      ]
+    }
+  ],
+  "expected": []
+}

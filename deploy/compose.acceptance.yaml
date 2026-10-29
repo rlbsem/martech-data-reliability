@@ -1,0 +1,53 @@
+# Additive, isolated acceptance lane. The original Compose topology is preserved.
+# docker compose -f compose.yaml -f deploy/compose.acceptance.yaml ...
+x-bounds: &bounds
+  cpus: 1.0
+  logging:
+    driver: json-file
+    options: {max-size: 5m, max-file: '2'}
+services:
+  initialize:
+    <<: *bounds
+  demo:
+    <<: *bounds
+  advertising:
+    <<: *bounds
+    restart: 'on-failure:3'
+    healthcheck: &dependency
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8340/readyz',timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+  website:
+    <<: *bounds
+    restart: 'on-failure:3'
+    healthcheck: *dependency
+  crm:
+    <<: *bounds
+    restart: 'on-failure:3'
+    healthcheck: *dependency
+  console:
+    <<: *bounds
+    restart: 'on-failure:3'
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8602/readyz',timeout=30)"]
+      interval: 30s
+      timeout: 35s
+      retries: 3
+      start_period: 30s
+  maintenance:
+    <<: *bounds
+    profiles: [maintenance]
+    build: .
+    user: '10001:10001'
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 512m
+    pids_limit: 128
+    tmpfs: ['/tmp:size=128m,mode=1777']
+    networks: [backend]
+    volumes: ['state:/state', 'console-config:/console-config:ro', 'publication-backups:/backups']
+    entrypoint: [python, -m, reliability_ops.backup]
+volumes:
+  publication-backups:

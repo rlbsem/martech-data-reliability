@@ -71,13 +71,29 @@ The read-only **Data Reliability Operations Console** inspects source status, qu
 
 ![Actual Data Reliability Operations Console](docs/evidence/operations/run02/browser/operations-desktop.png)
 
-[Executed operating evidence, independent reconciliation and screenshots](docs/evidence/operations/README.md). The current capture records **68 original + 33 operating/contract tests**, 30 HTTP scenario assertions, 73 browser assertions and ten automated accessibility states. Scenario assertions also run inside a regression test; these counts are different checks, not independent test totals.
+[Executed operating evidence, independent reconciliation and screenshots](docs/evidence/operations/README.md). The preserved operating capture records **68 original + 33 operating/contract tests**, 30 HTTP scenario assertions, 73 browser assertions and ten automated accessibility states. Scenario assertions also run inside a regression test; these counts are different checks, not independent test totals.
 
 ```bash
 docker compose up --build
 ```
 
 Open [the local console](http://127.0.0.1:8602/). No native marketing-platform connector, cloud account or paid service is involved. The original Python-only workflow below remains available.
+
+## Operational delivery and recovery
+
+The isolated application now distinguishes a responding process from an independently verified reporting publication. A source outage leaves the last publication inspectable while readiness returns 503. Private backup and restore commands verify exact bytes, implementation identity and independent source state before accepting an isolated recovery copy.
+
+- Digest-pinned container base, hash-locked Linux runtime wheels, non-root services, read-only console storage, private source networking and bounded resources/logs.
+- Separate liveness/readiness endpoints, structured request identifiers without request contents, and an inspectable **Operational readiness** view.
+- Quiescent publication backup, verified isolated restore, corruption holds and rejection when independent sources have advanced. No browser mutation or automatic worker resumption.
+
+![Actual operational readiness view from the running application](docs/evidence/delivery/run01/operations-ready-1440.png)
+
+[Architecture and security boundaries](docs/operational-delivery.md) · [Deployment and recovery runbook](docs/deployment-runbook.md) · [Executed acceptance, failures and limitations](docs/evidence/delivery/README.md).
+
+Current local verification executes **68 original + 48 operating/contract tests**, eight original process-death experiments, the existing 30-assertion HTTP scenario and 73 browser assertions, plus a separate operational failure experiment with six genuine readiness screenshots. Linux container acceptance is a separate GitHub Actions lane. These are synthetic application checks; no publicly hosted dynamic service or production acceptance is claimed.
+
+**Executed Linux container acceptance:** [recorded deployment, backup/restore, source outage, restart and zero-residual teardown](docs/evidence/delivery/container-run01/verification.json). Six inspected containers used the same verified image, non-root identities, read-only root filesystems and bounded CPU/memory/process/log settings. Only the console published a loopback port.
 
 ## Reproduce
 

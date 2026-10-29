@@ -123,7 +123,8 @@ class LocalRuntime:
             raise
 
     def spawn(self, mode, config, port):
-        f = (self.root / (mode + str(port) + ".log")).open("w", encoding="utf-8")
+        # A same-port restart must retain earlier operational observations.
+        f = (self.root / (mode + str(port) + ".log")).open("a", encoding="utf-8")
         p = subprocess.Popen(
             [
                 sys.executable,

@@ -1,0 +1,1 @@
+{"status": "not_ready", "observed_at": "2026-10-29T01:29:57.636431+00:00", "read_only": true, "synthetic": true, "reason": "dependency_publication_or_independent_verification_failed", "inspection_may_remain_available": true}

@@ -1,7 +1,7 @@
 import base64
 import json
 import re
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from http.server import BaseHTTPRequestHandler
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
@@ -10,6 +10,7 @@ from marketing_reliability.contracts import digest
 from .client import Client, Unknown
 from .common import sqlite
 from .view import state
+from .operational import BoundedServer, readiness, request_identity, response_headers
 
 
 def handler(config):
@@ -20,6 +21,7 @@ def handler(config):
         def reply(self, status, body, content_type="application/json"):
             raw = body if isinstance(body, bytes) else json.dumps(body, default=str).encode()
             self.send_response(status)
+            response_headers(self, status, "console")
             self.send_header("Content-Type", content_type)
             self.send_header("Content-Length", str(len(raw)))
             self.send_header("Cache-Control", "no-store")
@@ -32,11 +34,13 @@ def handler(config):
             self.wfile.write(raw)
 
         def do_POST(self):
+            request_identity(self)
             self.reply(405, {"error": "read_only_operator_console"})
 
         do_PATCH = do_DELETE = do_PUT = do_POST
 
         def do_GET(self):
+            request_identity(self)
             if urlparse("http://" + self.headers.get("Host", "")).hostname not in {
                 "127.0.0.1",
                 "localhost",
@@ -58,8 +62,11 @@ def handler(config):
                 file, mime = assets[parsed.path]
                 return self.reply(200, (Path(__file__).parent / "web" / file).read_bytes(), mime)
             try:
-                if parsed.path == "/health":
+                if parsed.path in {"/health", "/livez"}:
                     return self.reply(200, {"synthetic": True, "read_only": True})
+                if parsed.path in {"/readyz", "/api/operations"}:
+                    report = readiness(config)
+                    return self.reply(200 if report["status"] == "ready" else 503, report)
                 if parsed.path == "/api/state":
                     return self.reply(200, state(config))
                 q = parse_qs(parsed.query)
@@ -117,4 +124,4 @@ def handler(config):
 
 
 def serve(config, host="127.0.0.1", port=0):
-    return ThreadingHTTPServer((host, port), handler(config))
+    return BoundedServer((host, port), handler(config))

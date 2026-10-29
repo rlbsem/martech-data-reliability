@@ -1,0 +1,12 @@
+{
+  "independent-teardown.json": "b9227e86713e4c09079634cc8dc761d5ccdc30d650796906b19230cfe09c9d06",
+  "operations-ready-1440.png": "a3137a8b31c7e02296d05a066ea29dd9d36b296973368669077671cef08af039",
+  "operations-ready-320.png": "d08b90db5ca173cca773661276313693ce02b5875ce0cb5cdcd98e1a679cc745",
+  "operations-ready-390.png": "4f23fe73973258f7c888976353dbee0ab994c63acc7ea9a9b4c8c86138093ff3",
+  "operations-source-outage-1440.png": "d640e6a333d1fc3c904a8e77cf21be14d6fda756522a9b423c2731a5478ce106",
+  "operations-source-outage-320.png": "965d09c249ad58d2ed4ca3ba404d62b90efaca74e2108008bf6d050074d1ebac",
+  "operations-source-outage-390.png": "0d8d5f98e92fa5972b4f3f57c4cb8a88ac5b516432819b3cb0c951c14952706f",
+  "publication-backup-manifest.json": "646280f4b7ec4e2fc21759280b2ba54ff252c4463071db107576599a0a9e4c67",
+  "request-telemetry.json": "14c12c311167787b1142ec2bebd5f120d93b494c7ac3c3b3d28f3232504d353a",
+  "verification.json": "d3e93d243882ac7b8d9fcbe9acc55c62e435124b05bc330e6392313b528575e3"
+}

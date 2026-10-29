@@ -1,0 +1,1214 @@
+{
+  "status": "passed",
+  "executed_at": "2026-10-29T01:22:05.075693+00:00",
+  "git_revision": "e758e85e3d646318e6dbc229106e361cc371a6db",
+  "source_sha256": {
+    ".dockerignore": "62a1a0b9874d7bf919fbf1e6c9dad9be65869098ec834fc5588e2e43afba1294",
+    ".gitattributes": "e70d9b1736f11499cd573107d35c6f67c6f25458baed6cd47fcaf1bf1fe8bdc4",
+    ".github/workflows/delivery.yml": "e076f42173884cf042bc73e20c9cf1d1ec36a360d314abe5bea71fe590b45145",
+    ".github/workflows/operations.yml": "26d863d60f0c47061e04a6e7c50e7d9d845606d400dc9c87a9b32505b406f952",
+    ".github/workflows/verify.yml": "e0abc28a43066dd84902c0a2025bc82973013b33aea5c4ef53efc021766fea09",
+    "compose.yaml": "c66d0424b9717fff5fc771daf7f50785ccb36acc14d2c2d0890bd10f7ebcc8b3",
+    "deploy/compose.acceptance.yaml": "c8cb4423adefa90f078a058305b9ad514886787ded7aad907a9fb65e7478e214",
+    "Dockerfile": "6a07ec878706baadf37d7aab1b6d37604682f53eda13155aab9979dd687c86ec",
+    "fixtures/01-campaigns.json": "8e93c0246262abb498a78b04cc64f74db85f6ccc1302e140ccdfc3514885ba6d",
+    "fixtures/02-paid.json": "a3efba38344a1d44a895a7030f77ac3c69aebb232b2c0d3051540d50e7022d58",
+    "fixtures/03-web.json": "abc9de1ba9049d9cf0832ca41a0a85ed7fa6695c22d3dff7450d29ad37e2c96b",
+    "fixtures/04-crm.json": "c4e34bdcf699c99015293d95abbbdebc13618af4fb65b348b82cffc1d99c9712",
+    "fixtures/05-web-corrections.json": "c7d57c12d4e07aa679aaeffdb185a245a48e4a73fa19e3c00f37df7fef43e9b2",
+    "fixtures/06-paid-v2.json": "b338da6303f00a182d5de039d1269d82d0714051361c850d67b460a093959552",
+    "fixtures/07-crm-corrections.json": "26afa248896f2f6c3086ff7142021592c3cb803eb94f1513d342c18862afaf4d",
+    "fixtures/08-campaign-repair.json": "c00cd8e4527af5a9c799986c64dc7af4b35551344372d7086df7a7ea3cb22f5d",
+    "fixtures/09-paid-out-of-order.json": "ded08b918cede25322c74a3689a708277fdd3d08b9053061e4d1010ebde5a750",
+    "fixtures/10-unsupported-schema.json": "d022686318b3845a21829626dd373e21e4a2ae57b9457ea5a13f9327e08da340",
+    "operations_tests/conftest.py": "5c14832618c65eef4c07bfbe544361f46777336130145d79a63495ce258dc733",
+    "operations_tests/test_delivery.py": "7c02fc458d334228a0e351a06ac3dc6e42fdcef832d1f492b5897fd3ec06c55a",
+    "operations_tests/test_operating.py": "c2420e8038341faca9af9abd3227447ca72649f7786e5c62bbea108e626aa0a8",
+    "operations_tests/vendor/axe.min.js": "880970c081707360e64f34cea25ff91892f5bc95675b0776925b9709dd8a68bb",
+    "operations_tests/vendor/provenance.json": "6a333252660c05f04c4e17254966af37bd705182158ca6b18affe9ff0f0a2191",
+    "pyproject.toml": "723fe79342ec3da2fbf13087410ae1f9d90e577416858e9dfdbfd3b06225e366",
+    "requirements-operations.lock": "ae33a672adf18a561f179aaf4d26421598396c353f108911a42266c9b30acbde",
+    "requirements-runtime.lock": "b7cfe66ab6226d5c7aa1c87a35402ba8ab2da965e7820b16d7bc4560a1a7950b",
+    "requirements.lock": "578d7fd0a42d90e745fce2ecb7c95e5af6cff56d0ba3f1c9381a9ac355cb9021",
+    "scripts/browser_operations.py": "19652a617ab4a3a77d8bcfedcf04ea70d4e96dc2cc1c33e834e56596530c905e",
+    "scripts/check_delivery.py": "47965d0f833fc238340267c14238f4f130f27e49c40af53f38bb658bfe7bc06a",
+    "scripts/check_operations.py": "c03c90d3d60afe6767d8fe3f3eff35787b138420a0345192b03e26954244550f",
+    "scripts/crash_proof.py": "aa8dfa3c7d25b01519c41e1a6f6d6c3a67aaf5d561f3d635b6c70f7a7edbf29f",
+    "scripts/demo.py": "7c3630eed32bf51e86d0a451b42e51678b26aa172a5372dc851872b35e649db5",
+    "scripts/make_fixtures.py": "e7c98873aa1adb9179a9cb23c986cf794705ca66b6885080e20d3fdd8272f3fb",
+    "scripts/package.py": "c992651adbcd40b9990c4e8427f23b317dd90d9b286431db6e11b7955de7cd18",
+    "scripts/repository.py": "7a432f171c0df6521aa45d2a63f2f36c7c9232e1aaaad111c7d7bd9d7e2bccc0",
+    "scripts/verify.py": "2cbbed4cd45a531b86435d33744b8529e030b00ed6c21db3cb647ab89278066e",
+    "scripts/verify_delivery.py": "6229dcf2fbf048c0ecc7463f220f8d4920905f7a0d2d1372b2af883b8743fb1d",
+    "scripts/verify_operations.py": "c4a93637211a6ee76e33e18ab010fcc10e324a8c6544d6e8db91251004eb9674",
+    "src/marketing_reliability/__init__.py": "71a63253b379fa874eb66ab8fbf438433db1356f7273b3bf985bbd72af4681f6",
+    "src/marketing_reliability/cli.py": "6d802b6ef25933729456b9655294c6d7d75fd2008f410b6eeff2e75d52f3ad23",
+    "src/marketing_reliability/contracts.py": "c031e62080e92a486977940c00a44560cc407c7358745c62230949c2abfa02d3",
+    "src/marketing_reliability/oracle.py": "79b65e6fdd801454b9143690eaca9c43d3d063643da8213c35dff587a7819493",
+    "src/marketing_reliability/sql/campaign_daily.sql": "23324167067a04f934cf0c50fe03aa548e40531a1efce78c4cecfce38427881e",
+    "src/marketing_reliability/sql/schema.sql": "04ea1c7796f3ae69afb5a9abe6fc1705920843ecb619497326922b8c23d10e11",
+    "src/marketing_reliability/warehouse.py": "436fd94b8c60c5cb53315cec8e0a634dc14bc32ff27859522e6b1dc3f00130c7",
+    "src/reliability_ops/__init__.py": "bc694232f8d740e450c1bcd59ba780d9ea82dd24f8dd68620b3f46b89e1b5678",
+    "src/reliability_ops/backup.py": "f1763cb740c66301f06295c808a1cc8fa082f9a2567d31f1f21fceb13724b1e8",
+    "src/reliability_ops/client.py": "9663e1e399e6f15435bc507b0f3fc57437f033f38c3b90c9af4fc4e445d38ea2",
+    "src/reliability_ops/common.py": "fbe66c58398a669acaccb9af57befa5a3ed23bc55ba3ff3de2707012e6c777ad",
+    "src/reliability_ops/compose_setup.py": "3be38dd0d12bc4feadc2b2b229b3fbfc56cb6c3b1f3947b54584ee8ae6374bca",
+    "src/reliability_ops/console.py": "f897c6eaa57c55f93a8a55f2caf7388bcbd020e8c5b80423c14c615926ca8638",
+    "src/reliability_ops/controller.py": "428cd83c5c25efb1172624a5c071b845f17d27479d5399fab6c62772c0348e80",
+    "src/reliability_ops/demo.py": "b642fae0ef165d2938757565728323f7619e82dbea360fd1195b3271bbe7b2f7",
+    "src/reliability_ops/operational.py": "8c84a0c219c7578df4f23d509d4d09bccc5c86ae1072b4199ddfcbf67b243629",
+    "src/reliability_ops/oracle.py": "835ebb506cfafc2f4b037b4fe32cb4e9e8c5769ca04c87ca8699432e4a431425",
+    "src/reliability_ops/runtime.py": "925fb4161e510c7e97516f4c7cbb93679d7c7921cc4363e9e12c697dc67a8932",
+    "src/reliability_ops/scenario.py": "3831ad84f7b743fe8101e77244ed237980232e3cf46774520cf183ba03ad0ce8",
+    "src/reliability_ops/service.py": "3c26af2fcaf908e74ccfc41e7ec32efca6f5a07ee645fac41cb4975a80a90c53",
+    "src/reliability_ops/source.py": "8638fae639a6079578fdaad0fd836cf49eec2fdfe322999c8a4c520fb7ade8f7",
+    "src/reliability_ops/verify.py": "ce236c274e0d0db3c12c238d29e45db3334bfc9d5bd6db0461acde6bdbbd5f42",
+    "src/reliability_ops/view.py": "a4c74fd610e27d87bb0815b8431c5dbf4314f844aaddaed46d600681484ef7f3",
+    "src/reliability_ops/views.sql": "d7c08e40e059d5123796ba629c72fbe2b20f556be39ad082ebc251b9f18482e2",
+    "src/reliability_ops/web/app.js": "53c5b2b8318d6e1a8c792fc30fb0776fbafff3d2029d71f7830b3a7b88c8cdeb",
+    "src/reliability_ops/web/index.html": "7a826828e31b06288fc7d0fc96c7efcba6505263b68f09cacb8c5805145ca6ff",
+    "src/reliability_ops/web/style.css": "2d76c9bd8053a4e3facd5be064446c1ce93a8d7d56237926155c3f7311f7a779",
+    "src/reliability_ops/worker.py": "7cb68009f5dedc1673267d9d9877ef1cefbfd3a106c67e5a3da8e2a096954814",
+    "tests/conftest.py": "e9e5d9b21ec29f9ec4533ef2ee3a74d9f5c90757f9a57cadd0cb8bed62a51d83",
+    "tests/test_contracts.py": "7a2a77e1f53f303a6c4bdfe679d5aa381e80726567a0ff176e7008146b6dfc9c",
+    "tests/test_pipeline.py": "fdc7c422f1eed7b1875c8de3f457ed22e96d6856e0e30ef2dc252d83745021f4",
+    "tests/test_recovery.py": "6d3c9d9c6991d9dc7b1b5c2753f6033ed09de3823854c345b2d662cd2a44926b",
+    "tests/test_review.py": "47de258fd93e43cb99631b6b7b750ba7d4a666a119c2a8ae5c4f5d559803e015"
+  },
+  "platform": "Windows",
+  "python": "3.12.14",
+  "checks": [
+    {
+      "check": "verified_readiness",
+      "observed": [
+        200,
+        "ready"
+      ],
+      "expected": [
+        200,
+        "ready"
+      ],
+      "passed": true
+    },
+    {
+      "check": "independent_source_economics",
+      "observed": {
+        "cost_cents": 41000,
+        "impressions": 4000,
+        "clicks": 400,
+        "conversions": 6,
+        "revenue_cents": 115000
+      },
+      "expected": {
+        "cost_cents": 41000,
+        "impressions": 4000,
+        "clicks": 400,
+        "conversions": 6,
+        "revenue_cents": 115000
+      },
+      "passed": true
+    },
+    {
+      "check": "read_only_POST",
+      "observed": 405,
+      "expected": 405,
+      "passed": true
+    },
+    {
+      "check": "read_only_PATCH",
+      "observed": 405,
+      "expected": 405,
+      "passed": true
+    },
+    {
+      "check": "read_only_PUT",
+      "observed": 405,
+      "expected": 405,
+      "passed": true
+    },
+    {
+      "check": "read_only_DELETE",
+      "observed": 405,
+      "expected": 405,
+      "passed": true
+    },
+    {
+      "check": "backup_verified",
+      "observed": "passed",
+      "expected": "passed",
+      "passed": true
+    },
+    {
+      "check": "restore_verified",
+      "observed": "passed",
+      "expected": "passed",
+      "passed": true
+    },
+    {
+      "check": "ready:1440:no_overflow",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "check": "ready:1440:accessibility",
+      "observed": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "check": "ready:390:no_overflow",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "check": "ready:390:accessibility",
+      "observed": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "check": "ready:320:no_overflow",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "check": "ready:320:accessibility",
+      "observed": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "check": "outage_not_ready",
+      "observed": 503,
+      "expected": 503,
+      "passed": true
+    },
+    {
+      "check": "outage_still_alive",
+      "observed": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "check": "last_publication_retained",
+      "observed": 13,
+      "expected": 13,
+      "passed": true
+    },
+    {
+      "check": "source-outage:1440:no_overflow",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "check": "source-outage:1440:accessibility",
+      "observed": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "check": "source-outage:390:no_overflow",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "check": "source-outage:390:accessibility",
+      "observed": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "check": "source-outage:320:no_overflow",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "check": "source-outage:320:accessibility",
+      "observed": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "check": "browser_errors",
+      "observed": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "check": "browser_mutations",
+      "observed": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "check": "browser_external_requests",
+      "observed": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "check": "dependency_recovers",
+      "observed": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "check": "console_restart_preserves_publication",
+      "observed": 13,
+      "expected": 13,
+      "passed": true
+    },
+    {
+      "check": "corrupt_retained_input_not_ready",
+      "observed": 503,
+      "expected": 503,
+      "passed": true
+    },
+    {
+      "check": "restored_original_bytes_ready",
+      "observed": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "check": "new_incomplete_coverage_not_ready",
+      "observed": 503,
+      "expected": 503,
+      "passed": true
+    },
+    {
+      "check": "remote_ahead_restore_held",
+      "observed": "restore_not_ready_against_independent_sources",
+      "expected": "restore_not_ready_against_independent_sources",
+      "passed": true
+    },
+    {
+      "check": "request_ids_unique_across_restart",
+      "observed": 458,
+      "expected": 458,
+      "passed": true
+    },
+    {
+      "check": "owned_processes_stopped",
+      "observed": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "check": "source_unchanged_during_acceptance",
+      "observed": {
+        ".dockerignore": "62a1a0b9874d7bf919fbf1e6c9dad9be65869098ec834fc5588e2e43afba1294",
+        ".gitattributes": "e70d9b1736f11499cd573107d35c6f67c6f25458baed6cd47fcaf1bf1fe8bdc4",
+        ".github/workflows/delivery.yml": "e076f42173884cf042bc73e20c9cf1d1ec36a360d314abe5bea71fe590b45145",
+        ".github/workflows/operations.yml": "26d863d60f0c47061e04a6e7c50e7d9d845606d400dc9c87a9b32505b406f952",
+        ".github/workflows/verify.yml": "e0abc28a43066dd84902c0a2025bc82973013b33aea5c4ef53efc021766fea09",
+        "compose.yaml": "c66d0424b9717fff5fc771daf7f50785ccb36acc14d2c2d0890bd10f7ebcc8b3",
+        "deploy/compose.acceptance.yaml": "c8cb4423adefa90f078a058305b9ad514886787ded7aad907a9fb65e7478e214",
+        "Dockerfile": "6a07ec878706baadf37d7aab1b6d37604682f53eda13155aab9979dd687c86ec",
+        "fixtures/01-campaigns.json": "8e93c0246262abb498a78b04cc64f74db85f6ccc1302e140ccdfc3514885ba6d",
+        "fixtures/02-paid.json": "a3efba38344a1d44a895a7030f77ac3c69aebb232b2c0d3051540d50e7022d58",
+        "fixtures/03-web.json": "abc9de1ba9049d9cf0832ca41a0a85ed7fa6695c22d3dff7450d29ad37e2c96b",
+        "fixtures/04-crm.json": "c4e34bdcf699c99015293d95abbbdebc13618af4fb65b348b82cffc1d99c9712",
+        "fixtures/05-web-corrections.json": "c7d57c12d4e07aa679aaeffdb185a245a48e4a73fa19e3c00f37df7fef43e9b2",
+        "fixtures/06-paid-v2.json": "b338da6303f00a182d5de039d1269d82d0714051361c850d67b460a093959552",
+        "fixtures/07-crm-corrections.json": "26afa248896f2f6c3086ff7142021592c3cb803eb94f1513d342c18862afaf4d",
+        "fixtures/08-campaign-repair.json": "c00cd8e4527af5a9c799986c64dc7af4b35551344372d7086df7a7ea3cb22f5d",
+        "fixtures/09-paid-out-of-order.json": "ded08b918cede25322c74a3689a708277fdd3d08b9053061e4d1010ebde5a750",
+        "fixtures/10-unsupported-schema.json": "d022686318b3845a21829626dd373e21e4a2ae57b9457ea5a13f9327e08da340",
+        "operations_tests/conftest.py": "5c14832618c65eef4c07bfbe544361f46777336130145d79a63495ce258dc733",
+        "operations_tests/test_delivery.py": "7c02fc458d334228a0e351a06ac3dc6e42fdcef832d1f492b5897fd3ec06c55a",
+        "operations_tests/test_operating.py": "c2420e8038341faca9af9abd3227447ca72649f7786e5c62bbea108e626aa0a8",
+        "operations_tests/vendor/axe.min.js": "880970c081707360e64f34cea25ff91892f5bc95675b0776925b9709dd8a68bb",
+        "operations_tests/vendor/provenance.json": "6a333252660c05f04c4e17254966af37bd705182158ca6b18affe9ff0f0a2191",
+        "pyproject.toml": "723fe79342ec3da2fbf13087410ae1f9d90e577416858e9dfdbfd3b06225e366",
+        "requirements-operations.lock": "ae33a672adf18a561f179aaf4d26421598396c353f108911a42266c9b30acbde",
+        "requirements-runtime.lock": "b7cfe66ab6226d5c7aa1c87a35402ba8ab2da965e7820b16d7bc4560a1a7950b",
+        "requirements.lock": "578d7fd0a42d90e745fce2ecb7c95e5af6cff56d0ba3f1c9381a9ac355cb9021",
+        "scripts/browser_operations.py": "19652a617ab4a3a77d8bcfedcf04ea70d4e96dc2cc1c33e834e56596530c905e",
+        "scripts/check_delivery.py": "47965d0f833fc238340267c14238f4f130f27e49c40af53f38bb658bfe7bc06a",
+        "scripts/check_operations.py": "c03c90d3d60afe6767d8fe3f3eff35787b138420a0345192b03e26954244550f",
+        "scripts/crash_proof.py": "aa8dfa3c7d25b01519c41e1a6f6d6c3a67aaf5d561f3d635b6c70f7a7edbf29f",
+        "scripts/demo.py": "7c3630eed32bf51e86d0a451b42e51678b26aa172a5372dc851872b35e649db5",
+        "scripts/make_fixtures.py": "e7c98873aa1adb9179a9cb23c986cf794705ca66b6885080e20d3fdd8272f3fb",
+        "scripts/package.py": "c992651adbcd40b9990c4e8427f23b317dd90d9b286431db6e11b7955de7cd18",
+        "scripts/repository.py": "7a432f171c0df6521aa45d2a63f2f36c7c9232e1aaaad111c7d7bd9d7e2bccc0",
+        "scripts/verify.py": "2cbbed4cd45a531b86435d33744b8529e030b00ed6c21db3cb647ab89278066e",
+        "scripts/verify_delivery.py": "6229dcf2fbf048c0ecc7463f220f8d4920905f7a0d2d1372b2af883b8743fb1d",
+        "scripts/verify_operations.py": "c4a93637211a6ee76e33e18ab010fcc10e324a8c6544d6e8db91251004eb9674",
+        "src/marketing_reliability/__init__.py": "71a63253b379fa874eb66ab8fbf438433db1356f7273b3bf985bbd72af4681f6",
+        "src/marketing_reliability/cli.py": "6d802b6ef25933729456b9655294c6d7d75fd2008f410b6eeff2e75d52f3ad23",
+        "src/marketing_reliability/contracts.py": "c031e62080e92a486977940c00a44560cc407c7358745c62230949c2abfa02d3",
+        "src/marketing_reliability/oracle.py": "79b65e6fdd801454b9143690eaca9c43d3d063643da8213c35dff587a7819493",
+        "src/marketing_reliability/sql/campaign_daily.sql": "23324167067a04f934cf0c50fe03aa548e40531a1efce78c4cecfce38427881e",
+        "src/marketing_reliability/sql/schema.sql": "04ea1c7796f3ae69afb5a9abe6fc1705920843ecb619497326922b8c23d10e11",
+        "src/marketing_reliability/warehouse.py": "436fd94b8c60c5cb53315cec8e0a634dc14bc32ff27859522e6b1dc3f00130c7",
+        "src/reliability_ops/__init__.py": "bc694232f8d740e450c1bcd59ba780d9ea82dd24f8dd68620b3f46b89e1b5678",
+        "src/reliability_ops/backup.py": "f1763cb740c66301f06295c808a1cc8fa082f9a2567d31f1f21fceb13724b1e8",
+        "src/reliability_ops/client.py": "9663e1e399e6f15435bc507b0f3fc57437f033f38c3b90c9af4fc4e445d38ea2",
+        "src/reliability_ops/common.py": "fbe66c58398a669acaccb9af57befa5a3ed23bc55ba3ff3de2707012e6c777ad",
+        "src/reliability_ops/compose_setup.py": "3be38dd0d12bc4feadc2b2b229b3fbfc56cb6c3b1f3947b54584ee8ae6374bca",
+        "src/reliability_ops/console.py": "f897c6eaa57c55f93a8a55f2caf7388bcbd020e8c5b80423c14c615926ca8638",
+        "src/reliability_ops/controller.py": "428cd83c5c25efb1172624a5c071b845f17d27479d5399fab6c62772c0348e80",
+        "src/reliability_ops/demo.py": "b642fae0ef165d2938757565728323f7619e82dbea360fd1195b3271bbe7b2f7",
+        "src/reliability_ops/operational.py": "8c84a0c219c7578df4f23d509d4d09bccc5c86ae1072b4199ddfcbf67b243629",
+        "src/reliability_ops/oracle.py": "835ebb506cfafc2f4b037b4fe32cb4e9e8c5769ca04c87ca8699432e4a431425",
+        "src/reliability_ops/runtime.py": "925fb4161e510c7e97516f4c7cbb93679d7c7921cc4363e9e12c697dc67a8932",
+        "src/reliability_ops/scenario.py": "3831ad84f7b743fe8101e77244ed237980232e3cf46774520cf183ba03ad0ce8",
+        "src/reliability_ops/service.py": "3c26af2fcaf908e74ccfc41e7ec32efca6f5a07ee645fac41cb4975a80a90c53",
+        "src/reliability_ops/source.py": "8638fae639a6079578fdaad0fd836cf49eec2fdfe322999c8a4c520fb7ade8f7",
+        "src/reliability_ops/verify.py": "ce236c274e0d0db3c12c238d29e45db3334bfc9d5bd6db0461acde6bdbbd5f42",
+        "src/reliability_ops/view.py": "a4c74fd610e27d87bb0815b8431c5dbf4314f844aaddaed46d600681484ef7f3",
+        "src/reliability_ops/views.sql": "d7c08e40e059d5123796ba629c72fbe2b20f556be39ad082ebc251b9f18482e2",
+        "src/reliability_ops/web/app.js": "53c5b2b8318d6e1a8c792fc30fb0776fbafff3d2029d71f7830b3a7b88c8cdeb",
+        "src/reliability_ops/web/index.html": "7a826828e31b06288fc7d0fc96c7efcba6505263b68f09cacb8c5805145ca6ff",
+        "src/reliability_ops/web/style.css": "2d76c9bd8053a4e3facd5be064446c1ce93a8d7d56237926155c3f7311f7a779",
+        "src/reliability_ops/worker.py": "7cb68009f5dedc1673267d9d9877ef1cefbfd3a106c67e5a3da8e2a096954814",
+        "tests/conftest.py": "e9e5d9b21ec29f9ec4533ef2ee3a74d9f5c90757f9a57cadd0cb8bed62a51d83",
+        "tests/test_contracts.py": "7a2a77e1f53f303a6c4bdfe679d5aa381e80726567a0ff176e7008146b6dfc9c",
+        "tests/test_pipeline.py": "fdc7c422f1eed7b1875c8de3f457ed22e96d6856e0e30ef2dc252d83745021f4",
+        "tests/test_recovery.py": "6d3c9d9c6991d9dc7b1b5c2753f6033ed09de3823854c345b2d662cd2a44926b",
+        "tests/test_review.py": "47de258fd93e43cb99631b6b7b750ba7d4a666a119c2a8ae5c4f5d559803e015"
+      },
+      "expected": {
+        ".dockerignore": "62a1a0b9874d7bf919fbf1e6c9dad9be65869098ec834fc5588e2e43afba1294",
+        ".gitattributes": "e70d9b1736f11499cd573107d35c6f67c6f25458baed6cd47fcaf1bf1fe8bdc4",
+        ".github/workflows/delivery.yml": "e076f42173884cf042bc73e20c9cf1d1ec36a360d314abe5bea71fe590b45145",
+        ".github/workflows/operations.yml": "26d863d60f0c47061e04a6e7c50e7d9d845606d400dc9c87a9b32505b406f952",
+        ".github/workflows/verify.yml": "e0abc28a43066dd84902c0a2025bc82973013b33aea5c4ef53efc021766fea09",
+        "compose.yaml": "c66d0424b9717fff5fc771daf7f50785ccb36acc14d2c2d0890bd10f7ebcc8b3",
+        "deploy/compose.acceptance.yaml": "c8cb4423adefa90f078a058305b9ad514886787ded7aad907a9fb65e7478e214",
+        "Dockerfile": "6a07ec878706baadf37d7aab1b6d37604682f53eda13155aab9979dd687c86ec",
+        "fixtures/01-campaigns.json": "8e93c0246262abb498a78b04cc64f74db85f6ccc1302e140ccdfc3514885ba6d",
+        "fixtures/02-paid.json": "a3efba38344a1d44a895a7030f77ac3c69aebb232b2c0d3051540d50e7022d58",
+        "fixtures/03-web.json": "abc9de1ba9049d9cf0832ca41a0a85ed7fa6695c22d3dff7450d29ad37e2c96b",
+        "fixtures/04-crm.json": "c4e34bdcf699c99015293d95abbbdebc13618af4fb65b348b82cffc1d99c9712",
+        "fixtures/05-web-corrections.json": "c7d57c12d4e07aa679aaeffdb185a245a48e4a73fa19e3c00f37df7fef43e9b2",
+        "fixtures/06-paid-v2.json": "b338da6303f00a182d5de039d1269d82d0714051361c850d67b460a093959552",
+        "fixtures/07-crm-corrections.json": "26afa248896f2f6c3086ff7142021592c3cb803eb94f1513d342c18862afaf4d",
+        "fixtures/08-campaign-repair.json": "c00cd8e4527af5a9c799986c64dc7af4b35551344372d7086df7a7ea3cb22f5d",
+        "fixtures/09-paid-out-of-order.json": "ded08b918cede25322c74a3689a708277fdd3d08b9053061e4d1010ebde5a750",
+        "fixtures/10-unsupported-schema.json": "d022686318b3845a21829626dd373e21e4a2ae57b9457ea5a13f9327e08da340",
+        "operations_tests/conftest.py": "5c14832618c65eef4c07bfbe544361f46777336130145d79a63495ce258dc733",
+        "operations_tests/test_delivery.py": "7c02fc458d334228a0e351a06ac3dc6e42fdcef832d1f492b5897fd3ec06c55a",
+        "operations_tests/test_operating.py": "c2420e8038341faca9af9abd3227447ca72649f7786e5c62bbea108e626aa0a8",
+        "operations_tests/vendor/axe.min.js": "880970c081707360e64f34cea25ff91892f5bc95675b0776925b9709dd8a68bb",
+        "operations_tests/vendor/provenance.json": "6a333252660c05f04c4e17254966af37bd705182158ca6b18affe9ff0f0a2191",
+        "pyproject.toml": "723fe79342ec3da2fbf13087410ae1f9d90e577416858e9dfdbfd3b06225e366",
+        "requirements-operations.lock": "ae33a672adf18a561f179aaf4d26421598396c353f108911a42266c9b30acbde",
+        "requirements-runtime.lock": "b7cfe66ab6226d5c7aa1c87a35402ba8ab2da965e7820b16d7bc4560a1a7950b",
+        "requirements.lock": "578d7fd0a42d90e745fce2ecb7c95e5af6cff56d0ba3f1c9381a9ac355cb9021",
+        "scripts/browser_operations.py": "19652a617ab4a3a77d8bcfedcf04ea70d4e96dc2cc1c33e834e56596530c905e",
+        "scripts/check_delivery.py": "47965d0f833fc238340267c14238f4f130f27e49c40af53f38bb658bfe7bc06a",
+        "scripts/check_operations.py": "c03c90d3d60afe6767d8fe3f3eff35787b138420a0345192b03e26954244550f",
+        "scripts/crash_proof.py": "aa8dfa3c7d25b01519c41e1a6f6d6c3a67aaf5d561f3d635b6c70f7a7edbf29f",
+        "scripts/demo.py": "7c3630eed32bf51e86d0a451b42e51678b26aa172a5372dc851872b35e649db5",
+        "scripts/make_fixtures.py": "e7c98873aa1adb9179a9cb23c986cf794705ca66b6885080e20d3fdd8272f3fb",
+        "scripts/package.py": "c992651adbcd40b9990c4e8427f23b317dd90d9b286431db6e11b7955de7cd18",
+        "scripts/repository.py": "7a432f171c0df6521aa45d2a63f2f36c7c9232e1aaaad111c7d7bd9d7e2bccc0",
+        "scripts/verify.py": "2cbbed4cd45a531b86435d33744b8529e030b00ed6c21db3cb647ab89278066e",
+        "scripts/verify_delivery.py": "6229dcf2fbf048c0ecc7463f220f8d4920905f7a0d2d1372b2af883b8743fb1d",
+        "scripts/verify_operations.py": "c4a93637211a6ee76e33e18ab010fcc10e324a8c6544d6e8db91251004eb9674",
+        "src/marketing_reliability/__init__.py": "71a63253b379fa874eb66ab8fbf438433db1356f7273b3bf985bbd72af4681f6",
+        "src/marketing_reliability/cli.py": "6d802b6ef25933729456b9655294c6d7d75fd2008f410b6eeff2e75d52f3ad23",
+        "src/marketing_reliability/contracts.py": "c031e62080e92a486977940c00a44560cc407c7358745c62230949c2abfa02d3",
+        "src/marketing_reliability/oracle.py": "79b65e6fdd801454b9143690eaca9c43d3d063643da8213c35dff587a7819493",
+        "src/marketing_reliability/sql/campaign_daily.sql": "23324167067a04f934cf0c50fe03aa548e40531a1efce78c4cecfce38427881e",
+        "src/marketing_reliability/sql/schema.sql": "04ea1c7796f3ae69afb5a9abe6fc1705920843ecb619497326922b8c23d10e11",
+        "src/marketing_reliability/warehouse.py": "436fd94b8c60c5cb53315cec8e0a634dc14bc32ff27859522e6b1dc3f00130c7",
+        "src/reliability_ops/__init__.py": "bc694232f8d740e450c1bcd59ba780d9ea82dd24f8dd68620b3f46b89e1b5678",
+        "src/reliability_ops/backup.py": "f1763cb740c66301f06295c808a1cc8fa082f9a2567d31f1f21fceb13724b1e8",
+        "src/reliability_ops/client.py": "9663e1e399e6f15435bc507b0f3fc57437f033f38c3b90c9af4fc4e445d38ea2",
+        "src/reliability_ops/common.py": "fbe66c58398a669acaccb9af57befa5a3ed23bc55ba3ff3de2707012e6c777ad",
+        "src/reliability_ops/compose_setup.py": "3be38dd0d12bc4feadc2b2b229b3fbfc56cb6c3b1f3947b54584ee8ae6374bca",
+        "src/reliability_ops/console.py": "f897c6eaa57c55f93a8a55f2caf7388bcbd020e8c5b80423c14c615926ca8638",
+        "src/reliability_ops/controller.py": "428cd83c5c25efb1172624a5c071b845f17d27479d5399fab6c62772c0348e80",
+        "src/reliability_ops/demo.py": "b642fae0ef165d2938757565728323f7619e82dbea360fd1195b3271bbe7b2f7",
+        "src/reliability_ops/operational.py": "8c84a0c219c7578df4f23d509d4d09bccc5c86ae1072b4199ddfcbf67b243629",
+        "src/reliability_ops/oracle.py": "835ebb506cfafc2f4b037b4fe32cb4e9e8c5769ca04c87ca8699432e4a431425",
+        "src/reliability_ops/runtime.py": "925fb4161e510c7e97516f4c7cbb93679d7c7921cc4363e9e12c697dc67a8932",
+        "src/reliability_ops/scenario.py": "3831ad84f7b743fe8101e77244ed237980232e3cf46774520cf183ba03ad0ce8",
+        "src/reliability_ops/service.py": "3c26af2fcaf908e74ccfc41e7ec32efca6f5a07ee645fac41cb4975a80a90c53",
+        "src/reliability_ops/source.py": "8638fae639a6079578fdaad0fd836cf49eec2fdfe322999c8a4c520fb7ade8f7",
+        "src/reliability_ops/verify.py": "ce236c274e0d0db3c12c238d29e45db3334bfc9d5bd6db0461acde6bdbbd5f42",
+        "src/reliability_ops/view.py": "a4c74fd610e27d87bb0815b8431c5dbf4314f844aaddaed46d600681484ef7f3",
+        "src/reliability_ops/views.sql": "d7c08e40e059d5123796ba629c72fbe2b20f556be39ad082ebc251b9f18482e2",
+        "src/reliability_ops/web/app.js": "53c5b2b8318d6e1a8c792fc30fb0776fbafff3d2029d71f7830b3a7b88c8cdeb",
+        "src/reliability_ops/web/index.html": "7a826828e31b06288fc7d0fc96c7efcba6505263b68f09cacb8c5805145ca6ff",
+        "src/reliability_ops/web/style.css": "2d76c9bd8053a4e3facd5be064446c1ce93a8d7d56237926155c3f7311f7a779",
+        "src/reliability_ops/worker.py": "7cb68009f5dedc1673267d9d9877ef1cefbfd3a106c67e5a3da8e2a096954814",
+        "tests/conftest.py": "e9e5d9b21ec29f9ec4533ef2ee3a74d9f5c90757f9a57cadd0cb8bed62a51d83",
+        "tests/test_contracts.py": "7a2a77e1f53f303a6c4bdfe679d5aa381e80726567a0ff176e7008146b6dfc9c",
+        "tests/test_pipeline.py": "fdc7c422f1eed7b1875c8de3f457ed22e96d6856e0e30ef2dc252d83745021f4",
+        "tests/test_recovery.py": "6d3c9d9c6991d9dc7b1b5c2753f6033ed09de3823854c345b2d662cd2a44926b",
+        "tests/test_review.py": "47de258fd93e43cb99631b6b7b750ba7d4a666a119c2a8ae5c4f5d559803e015"
+      },
+      "passed": true
+    }
+  ],
+  "readiness": {
+    "status": "ready",
+    "observed_at": "2026-10-29T01:21:29.073034+00:00",
+    "read_only": true,
+    "synthetic": true,
+    "active_run": 13,
+    "independent_receipts": 11,
+    "source_inventory_sha256": "d1f202f4fa4584866974c78264d54bfba105e1bbb5b3cc2fd60b03cb9f0b5a08",
+    "source_checkpoints": [
+      {
+        "service": "advertising",
+        "seq": 6
+      },
+      {
+        "service": "website",
+        "seq": 3
+      },
+      {
+        "service": "crm",
+        "seq": 2
+      }
+    ],
+    "source_row_accounting": {
+      "admitted": 27,
+      "duplicate": 2,
+      "quarantined": 2
+    },
+    "totals": {
+      "cost_cents": 41000,
+      "impressions": 4000,
+      "clicks": 400,
+      "conversions": 6,
+      "revenue_cents": 115000
+    },
+    "historical_candidates": 13,
+    "unpublished_candidates": 8,
+    "reporting_as_of": "2026-09-06",
+    "freshness_boundary": "recorded_business_date_not_live_source_SLA"
+  },
+  "screenshots": {
+    "operations-ready-1440.png": "a3137a8b31c7e02296d05a066ea29dd9d36b296973368669077671cef08af039",
+    "operations-ready-390.png": "4f23fe73973258f7c888976353dbee0ab994c63acc7ea9a9b4c8c86138093ff3",
+    "operations-ready-320.png": "d08b90db5ca173cca773661276313693ce02b5875ce0cb5cdcd98e1a679cc745",
+    "operations-source-outage-1440.png": "d640e6a333d1fc3c904a8e77cf21be14d6fda756522a9b423c2731a5478ce106",
+    "operations-source-outage-390.png": "0d8d5f98e92fa5972b4f3f57c4cb8a88ac5b516432819b3cb0c951c14952706f",
+    "operations-source-outage-320.png": "965d09c249ad58d2ed4ca3ba404d62b90efaca74e2108008bf6d050074d1ebac"
+  },
+  "accessibility": [
+    {
+      "condition": "ready",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [],
+      "passes": 24,
+      "visibility_followups": []
+    },
+    {
+      "condition": "ready",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<aside>",
+                      "target": [
+                        "aside"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button data-view=\"lineage\" aria-pressed=\"false\">04 \u00b7 Source lineage</button>",
+              "target": [
+                "button[data-view=\"lineage\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"card\">",
+                      "target": [
+                        ".card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<td>Exact readback; no acknowledgment writes</td>",
+              "target": [
+                "tr:nth-child(1) > td:nth-child(3)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"card\">",
+                      "target": [
+                        ".card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<td>Raw-source values and SQL agree</td>",
+              "target": [
+                "tr:nth-child(2) > td:nth-child(3)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"card\">",
+                      "target": [
+                        ".card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<td>Changed coverage also blocks readiness</td>",
+              "target": [
+                "tr:nth-child(3) > td:nth-child(3)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"card\">",
+                      "target": [
+                        ".card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<td>Recorded scenario date; not a live SLA</td>",
+              "target": [
+                "tr:nth-child(4) > td:nth-child(3)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ]
+        }
+      ],
+      "passes": 25,
+      "visibility_followups": [
+        {
+          "rule": "color-contrast",
+          "target": [
+            "button[data-view=\"lineage\"]"
+          ],
+          "violations": [],
+          "incomplete": [],
+          "passes": 1
+        },
+        {
+          "rule": "color-contrast",
+          "target": [
+            "tr:nth-child(1) > td:nth-child(3)"
+          ],
+          "violations": [],
+          "incomplete": [],
+          "passes": 1
+        },
+        {
+          "rule": "color-contrast",
+          "target": [
+            "tr:nth-child(2) > td:nth-child(3)"
+          ],
+          "violations": [],
+          "incomplete": [],
+          "passes": 1
+        },
+        {
+          "rule": "color-contrast",
+          "target": [
+            "tr:nth-child(3) > td:nth-child(3)"
+          ],
+          "violations": [],
+          "incomplete": [],
+          "passes": 1
+        },
+        {
+          "rule": "color-contrast",
+          "target": [
+            "tr:nth-child(4) > td:nth-child(3)"
+          ],
+          "violations": [],
+          "incomplete": [],
+          "passes": 1
+        }
+      ]
+    },
+    {
+      "condition": "ready",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<aside>",
+                      "target": [
+                        "aside"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button data-view=\"recovery\" aria-pressed=\"false\">05 \u00b7 Recovery &amp; history</button>",
+              "target": [
+                "button[data-view=\"recovery\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"card\">",
+                      "target": [
+                        ".card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<td>Exact readback; no acknowledgment writes</td>",
+              "target": [
+                "tr:nth-child(1) > td:nth-child(3)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"card\">",
+                      "target": [
+                        ".card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<td>Raw-source values and SQL agree</td>",
+              "target": [
+                "tr:nth-child(2) > td:nth-child(3)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"card\">",
+                      "target": [
+                        ".card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<td>Matches publication pins</td>",
+              "target": [
+                "tr:nth-child(3) > td:nth-child(2)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"card\">",
+                      "target": [
+                        ".card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<td>Changed coverage also blocks readiness</td>",
+              "target": [
+                "tr:nth-child(3) > td:nth-child(3)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<section class=\"card\">",
+                      "target": [
+                        ".card"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<td>Recorded scenario date; not a live SLA</td>",
+              "target": [
+                "tr:nth-child(4) > td:nth-child(3)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ]
+        }
+      ],
+      "passes": 25,
+      "visibility_followups": [
+        {
+          "rule": "color-contrast",
+          "target": [
+            "button[data-view=\"recovery\"]"
+          ],
+          "violations": [],
+          "incomplete": [],
+          "passes": 1
+        },
+        {
+          "rule": "color-contrast",
+          "target": [
+            "tr:nth-child(1) > td:nth-child(3)"
+          ],
+          "violations": [],
+          "incomplete": [],
+          "passes": 1
+        },
+        {
+          "rule": "color-contrast",
+          "target": [
+            "tr:nth-child(2) > td:nth-child(3)"
+          ],
+          "violations": [],
+          "incomplete": [],
+          "passes": 1
+        },
+        {
+          "rule": "color-contrast",
+          "target": [
+            "tr:nth-child(3) > td:nth-child(2)"
+          ],
+          "violations": [],
+          "incomplete": [],
+          "passes": 1
+        },
+        {
+          "rule": "color-contrast",
+          "target": [
+            "tr:nth-child(3) > td:nth-child(3)"
+          ],
+          "violations": [],
+          "incomplete": [],
+          "passes": 1
+        },
+        {
+          "rule": "color-contrast",
+          "target": [
+            "tr:nth-child(4) > td:nth-child(3)"
+          ],
+          "violations": [],
+          "incomplete": [],
+          "passes": 1
+        }
+      ]
+    },
+    {
+      "condition": "source-outage",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [],
+      "passes": 22,
+      "visibility_followups": []
+    },
+    {
+      "condition": "source-outage",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<aside>",
+                      "target": [
+                        "aside"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button data-view=\"lineage\" aria-pressed=\"false\">04 \u00b7 Source lineage</button>",
+              "target": [
+                "button[data-view=\"lineage\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ]
+        }
+      ],
+      "passes": 23,
+      "visibility_followups": [
+        {
+          "rule": "color-contrast",
+          "target": [
+            "button[data-view=\"lineage\"]"
+          ],
+          "violations": [],
+          "incomplete": [],
+          "passes": 1
+        }
+      ]
+    },
+    {
+      "condition": "source-outage",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": null,
+                    "bgColor": null,
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscured",
+                    "expectedContrastRatio": "4.5:1",
+                    "shadowColor": null
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<aside>",
+                      "target": [
+                        "aside"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it's partially obscured by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button data-view=\"recovery\" aria-pressed=\"false\">05 \u00b7 Recovery &amp; history</button>",
+              "target": [
+                "button[data-view=\"recovery\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            }
+          ]
+        }
+      ],
+      "passes": 23,
+      "visibility_followups": [
+        {
+          "rule": "color-contrast",
+          "target": [
+            "button[data-view=\"recovery\"]"
+          ],
+          "violations": [],
+          "incomplete": [],
+          "passes": 1
+        }
+      ]
+    }
+  ],
+  "structured_log_rows": 458,
+  "synthetic": true,
+  "native_vendor_calls": 0,
+  "cloud_resources": 0,
+  "acceptance_boundary": "local_subprocess_http_and_browser",
+  "independent_human_acceptance": "not_executed",
+  "public_hosted_acceptance": "not_executed"
+}

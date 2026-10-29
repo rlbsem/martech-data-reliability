@@ -105,6 +105,6 @@ def check(folder):
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
-    p.add_argument("--evidence", type=Path, default=ROOT / "docs/evidence/operations/run02")
+    p.add_argument("--evidence", type=Path, default=ROOT / "docs/evidence/operations/run03")
     args = p.parse_args()
     check(args.evidence)

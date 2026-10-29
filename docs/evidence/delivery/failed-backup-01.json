@@ -1,0 +1,15 @@
+{
+  "status": "failed_then_corrected",
+  "execution_boundary": "actual_local_windows_tests",
+  "tests": 12,
+  "failed": 3,
+  "failed_cases": [
+    "test_quiescent_backup_restore_preserves_independent_values_and_never_overwrites",
+    "test_tampered_backup_and_added_files_are_rejected_before_restore",
+    "test_restore_against_remote_ahead_inventory_fails_closed"
+  ],
+  "observed_failure": "WinError 5 finalizing a publication backup directory",
+  "cause": "SQLite connection context managers committed transactions but did not close live handles before directory rename",
+  "correction": "Close source and destination SQLite connections explicitly before finalizing the archive",
+  "raw_runtime_output": "retained privately; may include configuration and is excluded from publication"
+}

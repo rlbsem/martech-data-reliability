@@ -1,0 +1,10 @@
+{
+  "boundary": "independent_Windows_listener_and_exact_workspace_process_inventory",
+  "cloud_inventory_performed": false,
+  "observed_at": "2026-10-29T01:23:46.8575156Z",
+  "owned_endpoints_checked": 4,
+  "exact_workspace_service_processes": 0,
+  "status": "passed",
+  "listening_endpoints": 0,
+  "TCP_refusal_probe": "inconclusive_timeout_not_used_as_absence_proof"
+}
