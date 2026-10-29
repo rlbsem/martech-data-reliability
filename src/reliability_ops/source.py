@@ -2,12 +2,13 @@
 
 import hmac
 import json
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from http.server import BaseHTTPRequestHandler
 from urllib.parse import urlparse
 
 from marketing_reliability.contracts import digest, identifier
 
 from .common import LIMIT, OWNERS, hash_value, now, sqlite
+from .operational import BoundedServer, request_identity, response_headers
 
 
 def initialize(path):
@@ -105,6 +106,7 @@ def handler(config):
         def reply(self, status, body):
             raw = body if isinstance(body, bytes) else json.dumps(body).encode()
             self.send_response(status)
+            response_headers(self, status, config["service"])
             self.send_header(
                 "Content-Type",
                 "application/octet-stream" if isinstance(body, bytes) else "application/json",
@@ -120,9 +122,24 @@ def handler(config):
             )
 
         def do_GET(self):
+            request_identity(self)
             path = urlparse(self.path).path
-            if path == "/health":
+            if path in {"/health", "/livez"}:
                 return self.reply(200, {"synthetic": True, "service": config["service"]})
+            if path == "/readyz":
+                try:
+                    with sqlite(config["db"], readonly=True) as c:
+                        ok = c.execute("PRAGMA quick_check").fetchone()[0] == "ok"
+                        ok = (
+                            ok
+                            and c.execute("SELECT mode FROM faults WHERE id=1").fetchone()[0]
+                            == "none"
+                        )
+                    return self.reply(
+                        200 if ok else 503, {"status": "ready" if ok else "not_ready"}
+                    )
+                except Exception:
+                    return self.reply(503, {"status": "not_ready"})
             if not self.auth("read"):
                 return self.reply(403, {"error": "read_scope_denied"})
             with sqlite(config["db"]) as c:
@@ -158,6 +175,7 @@ def handler(config):
                 return self.reply(200, b"changed bytes" if mode == "corrupt_body" else row[0])
 
         def do_POST(self):
+            request_identity(self)
             if self.path != "/v1/ack" or not self.auth("ack"):
                 return self.reply(403, {"error": "ack_scope_denied"})
             try:
@@ -216,4 +234,4 @@ def handler(config):
 
 
 def serve(config, host="127.0.0.1", port=0):
-    return ThreadingHTTPServer((host, port), handler(config))
+    return BoundedServer((host, port), handler(config))

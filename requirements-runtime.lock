@@ -1,0 +1,4 @@
+# Official PyPI CPython 3.12 Linux x86_64/aarch64 wheel hashes.
+duckdb==1.3.2 \
+    --hash=sha256:36abdfe0d1704fe09b08d233165f312dad7d7d0ecaaca5fb3bb869f4838a2d0b \
+    --hash=sha256:b49a11afba36b98436db83770df10faa03ebded06514cb9b180b513d8be7f392
