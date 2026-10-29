@@ -6,7 +6,7 @@
   ".github/workflows/verify.yml": "e0abc28a43066dd84902c0a2025bc82973013b33aea5c4ef53efc021766fea09",
   ".gitignore": "6665022616977a24c71efeea2e4905928defdf5ca81f7edef45803823293ca85",
   "Dockerfile": "6a07ec878706baadf37d7aab1b6d37604682f53eda13155aab9979dd687c86ec",
-  "LICENSE": "bfa35d897efdd7b0c543024c4d8a4d39feb8d9132f5432c1644f7f74443b4c13",
+  "LICENSE": "1819462f2e141f8a0f1371c5191ad9ceffe1455611b2d2359674485cb7c3a8c5",
   "README.md": "1a0b9cd71979bf74fe2e7ccccfbf072fd0cfb1ffb5b49965c2154600ac550e2b",
   "compose.yaml": "c66d0424b9717fff5fc771daf7f50785ccb36acc14d2c2d0890bd10f7ebcc8b3",
   "deploy/compose.acceptance.yaml": "c8cb4423adefa90f078a058305b9ad514886787ded7aad907a9fb65e7478e214",
